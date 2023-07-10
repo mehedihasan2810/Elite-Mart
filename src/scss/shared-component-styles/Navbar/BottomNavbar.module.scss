@@ -1,0 +1,21 @@
+.bottom_navbar_container{
+display: flex;
+justify-content: space-between;
+align-items: center;
+    
+
+> div{
+    display: flex;
+    align-items: center;
+}
+
+button{
+    background-color: transparent;
+    border: none;
+}
+
+svg{
+    width: 25px;
+    height: 25px;
+}
+}

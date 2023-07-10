@@ -1,0 +1,9 @@
+@use '@/scss/placeholder-classes/placeholder-classes';
+
+.navbar_container{
+
+
+    .navbar_center{
+        @extend %center-container;
+    }
+}

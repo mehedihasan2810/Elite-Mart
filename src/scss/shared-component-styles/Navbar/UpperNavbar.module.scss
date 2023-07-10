@@ -1,0 +1,28 @@
+.upperNavbar_container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-block: 0.5rem;
+  font-size: 0.9rem;
+
+  > div,
+  > ul,
+  > div > div {
+    display: flex;
+    align-items: center;
+  }
+
+  > div,
+  > ul {
+    gap: 1rem;
+  }
+
+  > div > div {
+    gap: 0.1rem;
+  }
+
+  svg {
+    width: 20px;
+    height: 20px;
+  }
+}

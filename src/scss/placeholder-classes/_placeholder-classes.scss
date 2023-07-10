@@ -1,0 +1,12 @@
+@use '@/scss/utils/variables' as v;
+%flex-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+%center-container{
+    max-inline-size: v.$max-width;
+    margin-inline: auto;
+    padding-inline: 0.5rem;
+}
