@@ -1,6 +1,16 @@
 import React from "react";
 import styles from "@/scss/shared-component-styles/Navbar/BottomNavbar.module.scss";
 const BottomNavbar = () => {
+
+    const displaySubmenu = (e) => {
+        const page = e.target.textContent;
+        const tempBtn = e.target.getBoundingClientRect();
+        const center = (tempBtn.left + tempBtn.right) / 2;
+        const bottom = tempBtn.bottom - 3;
+        // openSubmenu(page, { center, bottom });
+      };
+
+
   return (
     <div className={styles.bottom_navbar_container}>
       <div>
@@ -8,19 +18,19 @@ const BottomNavbar = () => {
 
         <ul role="list">
           <li>
-            <button>Featured</button>
+            <button onMouseOver={displaySubmenu}>Featured</button>
           </li>
           <li>
-            <button>Men</button>
+            <button onMouseOver={displaySubmenu}>Men</button>
           </li>
           <li>
-            <button>Women</button>
+            <button onMouseOver={displaySubmenu}>Women</button>
           </li>
           <li>
-            <button>Kids</button>
+            <button onMouseOver={displaySubmenu}>Kids</button>
           </li>
           <li>
-            <button>Sale</button>
+            <button onMouseOver={displaySubmenu}>Sale</button>
           </li>
         </ul>
       </div>

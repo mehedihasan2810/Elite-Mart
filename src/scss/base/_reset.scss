@@ -34,6 +34,7 @@ img, picture, video, canvas, svg {
   ul[role='list'],
   ol[role='list']{
     list-style: none;
+    padding-inline-start: 0;
   }
 
 //   #root, #__next {

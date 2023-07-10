@@ -1,21 +1,34 @@
-.bottom_navbar_container{
-display: flex;
-justify-content: space-between;
-align-items: center;
-    
+.bottom_navbar_container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-block: 0.8rem;
 
-> div{
+  > div,
+  ul {
     display: flex;
     align-items: center;
-}
+  }
 
-button{
+  ul {
+    gap: 1rem;
+  }
+
+  > div:first-child {
+    gap: 6rem;
+  }
+
+  > div:last-child {
+    gap: 2rem;
+  }
+
+  button {
     background-color: transparent;
     border: none;
-}
+  }
 
-svg{
+  svg {
     width: 25px;
     height: 25px;
-}
+  }
 }
