@@ -1,9 +1,11 @@
+@use "@/scss/utils/variables" as v;
 .upperNavbar_container {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding-block: 0.5rem;
-  font-size: 0.9rem;
+  // font-size: 0.9rem;
+  font-size: v.$font-size-sm;
 
   > div,
   > ul,

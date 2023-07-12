@@ -1,8 +1,8 @@
+@use "@/scss/utils/variables" as v;
 .bottom_navbar_container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-block: 0.8rem;
 
   > div,
   ul {
@@ -10,12 +10,36 @@
     align-items: center;
   }
 
-  ul {
-    gap: 1rem;
+  ul button {
+    font-size: v.$font-size-medium;
+    padding: 1rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 0.1rem;
+
+    svg {
+      width: 20px;
+      height: 20px;
+      transition: transform 300ms;
+    }
   }
 
+  // ul button:hover {
+  //   color: v.$color-slate-primary;
+  //   transform: scale(0.95);
+  // }
+
+  // ul button:hover svg {
+  //   transform: rotate(90deg);
+  // }
+
   > div:first-child {
-    gap: 6rem;
+    flex-grow: 1;
+  }
+
+  > div:first-child > ul {
+    margin-inline: auto;
   }
 
   > div:last-child {
@@ -30,5 +54,47 @@
   svg {
     width: 25px;
     height: 25px;
+  }
+}
+
+/* --------------------- 
+      submenu styles
+-----------------------*/
+.featured,
+.men,
+.women,
+.kids,
+.sale {
+  background-color: v.$bg-slate-primary;
+  display: flex;
+  gap: 3rem;
+  padding-block: 2rem;
+  padding-inline: 3rem;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  box-shadow: v.$box-shadow-primary;
+  will-change: clip-path, -webkit-clip-path;
+  clip-path: circle(0% at 50% 0%);
+  -webkit-clip-path: circle(0% at 50% 0%);
+  transition: clip-path 400ms cubic-bezier(0.165, 0.84, 0.44, 1),
+    -webkit-clip-path 400ms cubic-bezier(0.165, 0.84, 0.44, 1);
+
+  h6 {
+    font-size: v.$font-size-medium;
+    margin-block-end: 0.5rem;
+  }
+
+  li {
+    line-height: 1.7;
+  }
+
+  a {
+    font-size: v.$font-size-normal;
+    color: v.$color-slate-light;
+  }
+
+  a:hover {
+    color: #000;
   }
 }
