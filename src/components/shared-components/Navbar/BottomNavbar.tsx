@@ -4,6 +4,7 @@ import styles from "@/scss/shared-component-styles/Navbar/BottomNavbar.module.sc
 import { submenuData } from "./submenu-data";
 
 import SubMenu from "./SubMenu";
+import Search from "./Search";
 
 const BottomNavbar = () => {
   const handleCloseSubmenu = (event: React.PointerEvent<HTMLButtonElement>) => {
@@ -19,6 +20,7 @@ const BottomNavbar = () => {
       targetElement.style.color = "#000";
       targetElement.style.transform = "scale(1)";
       svgElement.style.transform = "rotate(0deg)";
+      submenu_element.style.zIndex = "-2";
       submenu_element.style.setProperty("clip-path", "circle(0% at 50% 0%)");
       submenu_element.style.setProperty(
         "-webkit-clip-path",
@@ -57,6 +59,7 @@ const BottomNavbar = () => {
       const submenuElement = menuElement as HTMLElement;
 
       if (targetElement.dataset.navLink === submenuElement.dataset.submenu) {
+        submenuElement.style.zIndex = "99";
         submenuElement.style.setProperty("clip-path", "circle(100% at 50% 0%)");
         submenuElement.style.setProperty(
           "-webkit-clip-path",
@@ -64,6 +67,7 @@ const BottomNavbar = () => {
         );
       } else {
         //  close non-target submenu
+        submenuElement.style.zIndex = "-2";
         submenuElement.style.setProperty("clip-path", "circle(0% at 50% 0%)");
         submenuElement.style.setProperty(
           "-webkit-clip-path",
@@ -87,6 +91,7 @@ const BottomNavbar = () => {
     });
 
     // close the target submenu
+    targetElement.style.zIndex = "-2";
     targetElement.style.setProperty("clip-path", "circle(0% at 50% 0%)");
     targetElement.style.setProperty(
       "-webkit-clip-path",
@@ -155,9 +160,7 @@ const BottomNavbar = () => {
         </div>
 
         <div>
-          <form>
-            <input type="search" />
-          </form>
+          <Search />
 
           <button>
             <svg

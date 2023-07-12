@@ -17,6 +17,7 @@
     display: flex;
     align-items: center;
     gap: 0.1rem;
+    will-change: transform, color;
 
     svg {
       width: 20px;
@@ -24,15 +25,6 @@
       transition: transform 300ms;
     }
   }
-
-  // ul button:hover {
-  //   color: v.$color-slate-primary;
-  //   transform: scale(0.95);
-  // }
-
-  // ul button:hover svg {
-  //   transform: rotate(90deg);
-  // }
 
   > div:first-child {
     flex-grow: 1;
@@ -71,7 +63,9 @@
   padding-block: 2rem;
   padding-inline: 3rem;
   position: absolute;
+  top: 0;
   left: 50%;
+  z-index: -2;
   transform: translateX(-50%);
   box-shadow: v.$box-shadow-primary;
   will-change: clip-path, -webkit-clip-path;

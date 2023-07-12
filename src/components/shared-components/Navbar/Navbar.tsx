@@ -1,19 +1,17 @@
-import React from 'react'
-import styles from '@/scss/shared-component-styles/Navbar/Navbar.module.scss';
-import UpperNavbar from './UpperNavbar';
-import BottomNavbar from './BottomNavbar';
-import SubMenu from './SubMenu';
+import React from "react";
+import styles from "@/scss/shared-component-styles/Navbar/Navbar.module.scss";
+import UpperNavbar from "./UpperNavbar";
+import BottomNavbar from "./BottomNavbar";
 
 const Navbar = () => {
   return (
-    <div className={`${styles.navbar_container} nav-container`}>
+    <header className={`${styles.navbar_container} nav-container`}>
       <div className={styles.navbar_center}>
-      <UpperNavbar/>
-      <BottomNavbar/>
-      
+        <UpperNavbar />
+        <BottomNavbar />
       </div>
-    </div>
-  )
-}
+    </header>
+  );
+};
 
-export default Navbar
+export default Navbar;
