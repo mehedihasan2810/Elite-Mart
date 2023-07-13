@@ -17,7 +17,6 @@ const SubMenu = ({
   onSubmenuLeave,
   data,
 }: SubMenuPropsType) => {
-  console.log(data);
   return (
     <aside
       className={className}

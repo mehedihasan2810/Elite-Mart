@@ -1,13 +1,15 @@
-'use client'
+"use client";
 import React from "react";
 // import './globals.css'
 import "@/scss/globals.scss";
-import { Inter } from "next/font/google";
+import {  Work_Sans } from "next/font/google";
 import { Provider } from "react-redux";
 import { store } from "@/redux/store";
 import Navbar from "@/components/shared-components/Navbar/Navbar";
 
-const inter = Inter({ subsets: ["latin"] });
+const work_Sans = Work_Sans({
+  subsets: ["latin"],
+});
 
 export const metadata = {
   title: "Create Next App",
@@ -21,11 +23,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={work_Sans.className}>
         <Provider store={store}>
-        <Navbar/>
+          <Navbar />
           {children}
-          </Provider>
+        </Provider>
       </body>
     </html>
   );
