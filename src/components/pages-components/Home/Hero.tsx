@@ -9,74 +9,75 @@ import Link from "next/link";
 const heroProductData = [
   {
     id: nanoid(),
-    title: "Kid Inspiration",
+    title: "Kids Buddy",
     datasetValue: "kid-shoes",
     img1: "https://i.ibb.co/C9RCHN1/kids-shoes2.jpg",
     img2: "https://i.ibb.co/Kbj76cj/kids-shoes3.jpg",
   },
   {
     id: nanoid(),
-    title: "Kid Power",
+    title: "Kids Happiness",
     datasetValue: "kid-clothes",
-    img1: "https://i.ibb.co/C9RCHN1/kids-shoes2.jpg",
-    img2: "https://i.ibb.co/Kbj76cj/kids-shoes3.jpg",
+    img1: "https://i.ibb.co/sR0ZdQs/kids2.jpg",
+    img2: "https://i.ibb.co/VYbhCX9/kids1.jpg",
   },
   {
     id: nanoid(),
     title: "Women Power",
     datasetValue: "women-clothes",
-    img1: "https://i.ibb.co/C9RCHN1/kids-shoes2.jpg",
-    img2: "https://i.ibb.co/Kbj76cj/kids-shoes3.jpg",
+    img1: "https://i.ibb.co/mG54Kwq/pexels-photo-2.jpg",
+    img2: "https://i.ibb.co/NSw7N5b/pexels-photo-5.jpg",
   },
   {
     id: nanoid(),
-    title: "Women Inspiration",
+    title: "Women Freedom",
     datasetValue: "women-shoes",
-    img1: "https://i.ibb.co/C9RCHN1/kids-shoes2.jpg",
-    img2: "https://i.ibb.co/Kbj76cj/kids-shoes3.jpg",
+    img1: "https://i.ibb.co/FsQGVPG/women-shoes2.jpg",
+    img2: "https://i.ibb.co/FqdB0tS/women-shoes3.webp",
+  },
+  {
+    id: nanoid(),
+    title: "Men Strength",
+    datasetValue: "men-shoes",
+    img1: "https://i.ibb.co/r4Dk0kt/shoes3.jpg",
+    img2: "https://i.ibb.co/QM6KDh9/shoes4.jpg",
   },
   {
     id: nanoid(),
     title: "Men Inspiration",
-    datasetValue: "men-shoes",
-    img1: "https://i.ibb.co/C9RCHN1/kids-shoes2.jpg",
-    img2: "https://i.ibb.co/Kbj76cj/kids-shoes3.jpg",
-  },
-  {
-    id: nanoid(),
-    title: "Men Power",
     datasetValue: "men-clothes",
-    img1: "https://i.ibb.co/C9RCHN1/kids-shoes2.jpg",
-    img2: "https://i.ibb.co/Kbj76cj/kids-shoes3.jpg",
+    img1: "https://i.ibb.co/k2B5xRw/men-clothes-1.webp",
+    img2: "https://i.ibb.co/J3KByKq/men-clothes-2.jpg",
   },
   {
     id: nanoid(),
-    title: "Featured Clothes",
+    title: "Your Favorite",
     datasetValue: "featured-clothes",
-    img1: "https://i.ibb.co/C9RCHN1/kids-shoes2.jpg",
-    img2: "https://i.ibb.co/Kbj76cj/kids-shoes3.jpg",
+    img1: "https://i.ibb.co/Jc8LNqF/featured-clothes-2.webp",
+    img2: "https://i.ibb.co/Df30CyD/featured-clothes-1.webp",
   },
   {
     id: nanoid(),
-    title: "Featured Shoes",
+    title: "Your Joy",
     datasetValue: "featured-shoes",
-    img1: "https://i.ibb.co/C9RCHN1/kids-shoes2.jpg",
-    img2: "https://i.ibb.co/Kbj76cj/kids-shoes3.jpg",
+    img1: "https://i.ibb.co/R2Ghc4c/men-shoes-3.jpg",
+    img2: "https://i.ibb.co/1s5Z7yC/arrival-shoes-1.jpg",
   },
 ];
 
 const Hero = () => {
-  const heroGridRef = useRef<HTMLDivElement>(null!);
-  // const movingElementRef = useRef<HTMLDivElement>(null!)
+  // const heroGridRef = useRef<HTMLDivElement>(null!);
 
   const { handleHeroGridPointerOver, handleHeroGridPointerLeave } = useHero();
 
   return (
     <>
-      {/* moving element */}
+      {/* moving elements */}
       <aside className={styles.hero_moving_elements} data-hero-moving-elements>
         <div className={styles.moving_cursor} data-moving-element>
-          <Link href="#" data-moving-cursor-link>Shop</Link>
+          <Link href="#" data-moving-cursor-link>
+            Shop
+          </Link>
         </div>
         {heroProductData.map((data) => (
           <div
@@ -87,34 +88,6 @@ const Hero = () => {
             {data.title}
           </div>
         ))}
-
-        {/* <div className={styles.moving_cursor} data-moving-element>
-          Shop
-        </div>
-        <div data-hero-title data-hero-product-title="kid-shoes">
-          Kid Inspiration
-        </div>
-        <div data-hero-title data-hero-product-title="kid-clothes">
-          Kid Power
-        </div>
-        <div data-hero-title data-hero-product-title="women-clothes">
-          Women Power
-        </div>
-        <div data-hero-title data-hero-product-title="women-shoes">
-          Women Inspiration
-        </div>
-        <div data-hero-title data-hero-product-title="men-clothes">
-          Men Power
-        </div>
-        <div data-hero-title data-hero-product-title="men-shoes">
-          Men Inspiration
-        </div>
-        <div data-hero-title data-hero-product-title="featured-clothes">
-          Featured Inspiration
-        </div>
-        <div data-hero-title data-hero-product-title="featured-shoes">
-          Featured Power
-        </div> */}
       </aside>
       {/*  */}
 
@@ -122,7 +95,7 @@ const Hero = () => {
         <div
           onPointerOver={handleHeroGridPointerOver}
           onPointerLeave={handleHeroGridPointerLeave}
-          ref={heroGridRef}
+          // ref={heroGridRef}
           data-hero-grid-element
           className={styles.hero_grid}
         >
@@ -135,7 +108,7 @@ const Hero = () => {
               <Image
                 src={data.img1}
                 alt={data.datasetValue}
-                // priority
+                priority
                 quality={100}
                 fill
                 placeholder="blur"
@@ -144,7 +117,7 @@ const Hero = () => {
               <Image
                 src={data.img2}
                 alt={data.datasetValue}
-                // priority
+                priority
                 quality={100}
                 fill
                 placeholder="blur"

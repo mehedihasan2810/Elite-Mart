@@ -1,9 +1,9 @@
 import getDomElement from "@/utilities/getDomElement";
 import getDomElements from "@/utilities/getDomElements";
-import React, { useState } from "react";
+import React from "react";
 
 // TODO set these urls to hero product link href
-const heroProductUrls = new Map([
+const mapHeroProductUrls = new Map([
   ["kid-shoes", "#"],
   ["kid-clothes", "#"],
   ["women-clothes", "#"],
@@ -14,9 +14,9 @@ const heroProductUrls = new Map([
   ["featured-shoes", "#"],
 ]);
 
-const useHero = () => {
-  const [isImgOnTopLeft, setIsImgOnTopLeft] = useState(true);
+const mapHeroClipImgPosition = new Map();
 
+const useHero = () => {
   const handleHeroGridPointerOver = (e: React.PointerEvent<HTMLDivElement>) => {
     e.stopPropagation();
 
@@ -43,6 +43,13 @@ const useHero = () => {
         "img:nth-of-type(2)"
       ) as HTMLElement;
 
+      //  console.log(heroGridChild.dataset.heroProductTitle)
+      const imgDatasetValue = heroGridChild.dataset.heroProductTitle;
+      const isExist = mapHeroClipImgPosition.has(imgDatasetValue);
+      if (!isExist) {
+        mapHeroClipImgPosition.set(imgDatasetValue, true);
+      }
+
       // show clip img
       img.style.setProperty("clip-path", "circle(100% at 50% 50%)");
       img.style.setProperty("-webkit-clip-path", "circle(100% at 50% 50%)");
@@ -54,15 +61,19 @@ const useHero = () => {
       ) as HTMLElement;
 
       // set clip img hiding position
-      if (isImgOnTopLeft) {
+      const imgDatasetValue = relatedHeroGridChild.dataset.heroProductTitle;
+
+      if (mapHeroClipImgPosition.get(imgDatasetValue)) {
         img.style.setProperty("clip-path", "circle(0% at 150% 150%)");
         img.style.setProperty("-webkit-clip-path", "circle(0% at 150% 150%)");
-        setIsImgOnTopLeft(!isImgOnTopLeft);
+
+        mapHeroClipImgPosition.set(imgDatasetValue, false);
       } else {
         img.style.setProperty("clip-path", "circle(0% at -50% -50%)");
         img.style.setProperty("-webkit-clip-path", "circle(0% at -50% -50%)");
-        setIsImgOnTopLeft(!isImgOnTopLeft);
+        mapHeroClipImgPosition.set(imgDatasetValue, true);
       }
+      // ----------------
     }
 
     heroKidsTitles.forEach((elemnt) => {
@@ -110,31 +121,29 @@ const useHero = () => {
     // hide all hero product title
     heroKidsTitles.forEach((elemnt) => {
       const element = elemnt as HTMLElement;
-
       element.style.opacity = "0";
     });
     //
 
-    // get back to default of clip img
     clipImgs.forEach((elemnt) => {
-      const element = elemnt as HTMLElement;
-
-      const computedStyle = window.getComputedStyle(element);
-      const clipPath = computedStyle.getPropertyValue("clip-path");
-
-      if (clipPath === "circle(100% at 50% 50%)") {
-        if (isImgOnTopLeft) {
-          element.style.setProperty("clip-path", "circle(0% at 150% 150%)");
-          setIsImgOnTopLeft(!isImgOnTopLeft);
-        } else {
-          element.style.setProperty("clip-path", "circle(0% at -50% -50%)");
-          element.style.setProperty(
-            "-webkit-clip-path",
-            "circle(0% at -50% -50%)"
-          );
-          setIsImgOnTopLeft(!isImgOnTopLeft);
-        }
+      const imgElement = elemnt as HTMLImageElement;
+      // set clip img hiding position
+      if (mapHeroClipImgPosition.get(imgElement.alt)) {
+        imgElement.style.setProperty("clip-path", "circle(0% at 150% 150%)");
+        imgElement.style.setProperty(
+          "-webkit-clip-path",
+          "circle(0% at 150% 150%)"
+        );
+        mapHeroClipImgPosition.set(imgElement.alt, false);
+      } else {
+        imgElement.style.setProperty("clip-path", "circle(0% at -50% -50%)");
+        imgElement.style.setProperty(
+          "-webkit-clip-path",
+          "circle(0% at -50% -50%)"
+        );
+        mapHeroClipImgPosition.set(imgElement.alt, true);
       }
+      // --------
     });
   };
 
