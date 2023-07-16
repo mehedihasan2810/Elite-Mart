@@ -71,8 +71,8 @@
   will-change: clip-path, -webkit-clip-path;
   clip-path: circle(0% at 50% 0%);
   -webkit-clip-path: circle(0% at 50% 0%);
-  transition: clip-path 400ms cubic-bezier(0.165, 0.84, 0.44, 1),
-    -webkit-clip-path 400ms cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: clip-path 300ms ease-in,
+    -webkit-clip-path 300ms ease-in;
 
   h6 {
     font-size: v.$font-size-medium;

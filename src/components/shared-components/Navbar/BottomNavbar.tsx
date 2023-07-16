@@ -20,7 +20,7 @@ const BottomNavbar = () => {
       targetElement.style.color = "#000";
       targetElement.style.transform = "scale(1)";
       svgElement.style.transform = "rotate(0deg)";
-      submenu_element.style.zIndex = "-2";
+      // submenu_element.style.zIndex = "-2";
       submenu_element.style.setProperty("clip-path", "circle(0% at 50% 0%)");
       submenu_element.style.setProperty(
         "-webkit-clip-path",
@@ -67,7 +67,7 @@ const BottomNavbar = () => {
         );
       } else {
         //  close non-target submenu
-        submenuElement.style.zIndex = "-2";
+        // submenuElement.style.zIndex = "-2";
         submenuElement.style.setProperty("clip-path", "circle(0% at 50% 0%)");
         submenuElement.style.setProperty(
           "-webkit-clip-path",
@@ -91,7 +91,7 @@ const BottomNavbar = () => {
     });
 
     // close the target submenu
-    targetElement.style.zIndex = "-2";
+    // targetElement.style.zIndex = "-2";
     targetElement.style.setProperty("clip-path", "circle(0% at 50% 0%)");
     targetElement.style.setProperty(
       "-webkit-clip-path",
@@ -136,6 +136,8 @@ const BottomNavbar = () => {
                     data-nav-link={item.page.toLowerCase()}
                     onPointerEnter={handleShowSubmenu}
                     onPointerLeave={handleCloseSubmenu}
+
+                    data-testid='main-nav-link'
                   >
                     <span>{page}</span>
                     <svg

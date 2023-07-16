@@ -2,6 +2,7 @@
  import Hero from "@/components/pages-components/Home/Hero";
 import styles from "./page.module.css";
 import useHome from "@/hooks/pages/Home/useHome";
+import NewArrival from "@/components/pages-components/Home/NewArrival";
 
 export default function Home() {
 
@@ -10,7 +11,8 @@ export default function Home() {
 
   return (
     <main className={styles.main}>
-       <Hero/>     
+       <Hero/> 
+       <NewArrival/>    
     </main>
   );
 }

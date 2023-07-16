@@ -1,0 +1,111 @@
+@use "@/scss/placeholder-classes/placeholder-classes";
+.new_arrival_container {
+  width: 1800px;
+  margin-inline: auto;
+  margin-block: 100px;
+
+  .new_arrival_headers {
+    width: max-content;
+    margin-inline: auto;
+    margin-block-end: 30px;
+    text-align: center;
+  }
+
+  .arrival_headers {
+    position: relative;
+  }
+  h2 {
+    font-size: 4rem;
+    line-height: 1;
+    text-transform: uppercase;
+  }
+
+  @supports (-webkit-text-stroke: 1px #000) {
+    h2:first-child {
+      -webkit-text-stroke: 3px #000;
+      text-stroke: 1px #000;
+      -webkit-text-fill-color: transparent;
+      text-fill-color: transparent;
+    }
+  }
+
+  .arrival_header_mask {
+    color: #000;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: max-content;
+    clip-path: inset(0 0 0 0);
+  }
+
+  button {
+    background-color: #000;
+    color: #fff;
+    border-radius: 9999px;
+    padding-inline: 1.1rem;
+    padding-block: 0.4rem;
+    margin-block-start: 1rem;
+    cursor: pointer;
+    border: none;
+  }
+
+  [data-arrival-small-img-wrapper] {
+    display: flex;
+    gap: 1rem;
+    width: fit-content;
+    padding: 0.5rem;
+  }
+
+  [data-arrival-small-img-wrapper] > div {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    transition: transform 300ms ease-in;
+    cursor: pointer;
+  }
+
+  [data-arrival-small-img-wrapper] img {
+    border-radius: 50%;
+    transition: filter 300ms ease-in;
+    object-fit: cover;
+  }
+
+  [data-arrival-small-img-wrapper] div:first-child {
+    transform: scale(1.05);
+  }
+
+  [data-arrival-small-img-wrapper] > div:first-child img {
+    filter: drop-shadow(0 0 12px gray);
+  }
+
+  .arrival_img_wrapper {
+    width: 100%;
+    height: 90vh;
+    position: relative;
+    border: 1px solid;
+
+    img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      will-change: clip-path, -webkit-clip-path;
+      transition: clip-path 1000ms ease-out, -webkit-clip-path 1000ms ease-out;
+    }
+
+    img:first-child {
+      clip-path: circle(100% at 50% 50%);
+      -webkit-clip-path: circle(100% at 50% 50%);
+      transition: clip-path 0ms ease-out 1000ms,
+        -webkit-clip-path 0ms ease-out 1000ms;
+      z-index: auto;
+    }
+
+    img:not(:first-child) {
+      clip-path: circle(0% at 50% 50%);
+      -webkit-clip-path: circle(0% at 50% 50%);
+      transition: clip-path 1000ms ease-out, -webkit-clip-path 1000ms ease-out;
+      z-index: -1;
+    }
+  }
+}

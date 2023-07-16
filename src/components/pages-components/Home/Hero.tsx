@@ -1,5 +1,5 @@
 "use client";
-import React, { useRef } from "react";
+import React from "react";
 import styles from "@/scss/pages-styles/Home/Hero.module.scss";
 import Image from "next/image";
 import useHero from "@/hooks/pages/Home/useHero";

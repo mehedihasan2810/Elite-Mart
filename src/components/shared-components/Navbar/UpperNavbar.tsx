@@ -8,7 +8,7 @@ const UpperNavbar = () => {
       <div>
 
         <div>
-          <Image src="us.svg" width={25} height={25} alt="us flag" />
+          <Image data-testid='flag' src="us.svg" width={25} height={25} alt="us flag" />
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
