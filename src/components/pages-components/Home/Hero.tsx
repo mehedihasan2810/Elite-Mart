@@ -112,7 +112,7 @@ const Hero = () => {
                 quality={100}
                 fill
                 placeholder="blur"
-                blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8fwYAAtABzbrmHzgAAAAASUVORK5CYII="
+                blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP88BQAAssB12e3k1gAAAAASUVORK5CYII="
               />
               <Image
                 src={data.img2}
@@ -121,171 +121,10 @@ const Hero = () => {
                 quality={100}
                 fill
                 placeholder="blur"
-                blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8fwYAAtABzbrmHzgAAAAASUVORK5CYII="
+                blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP88BQAAssB12e3k1gAAAAASUVORK5CYII="
               />
             </div>
           ))}
-
-          {/* <div data-hero-grid-child data-hero-product-title="kid-shoes">
-            <Image
-              src="https://i.ibb.co/C9RCHN1/kids-shoes2.jpg"
-              alt="kids shoes"
-              // priority
-              quality={100}
-              fill
-              placeholder="blur"
-              blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8fwYAAtABzbrmHzgAAAAASUVORK5CYII="
-            />
-            <Image
-              src="https://i.ibb.co/Kbj76cj/kids-shoes3.jpg"
-              alt="kids shoes"
-              // priority
-              quality={100}
-              fill
-              placeholder="blur"
-              blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8fwYAAtABzbrmHzgAAAAASUVORK5CYII="
-            />
-          </div> */}
-          {/* <div data-hero-grid-child data-hero-product-title="kid-clothes">
-            <Image
-              src="https://i.ibb.co/sR0ZdQs/kids2.jpg"
-              alt="kids shoes"
-              // priority
-              quality={100}
-              fill
-              placeholder="blur"
-              blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8fwYAAtABzbrmHzgAAAAASUVORK5CYII="
-            />
-            <Image
-              src="https://i.ibb.co/Kbj76cj/kids-shoes3.jpg"
-              alt="kids shoes"
-              // priority
-              quality={100}
-              fill
-              placeholder="blur"
-              blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8fwYAAtABzbrmHzgAAAAASUVORK5CYII="
-            />
-          </div>
-          <div data-hero-grid-child data-hero-product-title="women-clothes">
-            <Image
-              src="https://i.ibb.co/mG54Kwq/pexels-photo-2.jpg"
-              alt="kids shoes"
-              // priority
-              quality={100}
-              fill
-              placeholder="blur"
-              blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8fwYAAtABzbrmHzgAAAAASUVORK5CYII="
-            />
-            <Image
-              src="https://i.ibb.co/Kbj76cj/kids-shoes3.jpg"
-              alt="kids shoes"
-              // priority
-              quality={100}
-              fill
-              placeholder="blur"
-              blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8fwYAAtABzbrmHzgAAAAASUVORK5CYII="
-            />
-          </div>
-          <div data-hero-grid-child data-hero-product-title="women-shoes">
-            <Image
-              src="https://i.ibb.co/r4Dk0kt/shoes3.jpg"
-              alt="kids shoes"
-              // priority
-              quality={100}
-              fill
-              placeholder="blur"
-              blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8fwYAAtABzbrmHzgAAAAASUVORK5CYII="
-            />
-            <Image
-              src="https://i.ibb.co/Kbj76cj/kids-shoes3.jpg"
-              alt="kids shoes"
-              // priority
-              quality={100}
-              fill
-              placeholder="blur"
-              blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8fwYAAtABzbrmHzgAAAAASUVORK5CYII="
-            />
-          </div>
-          <div data-hero-grid-child data-hero-product-title="men-shoes">
-            <Image
-              src="https://i.ibb.co/vZMkBz4/shoes2.webp"
-              alt="kids shoes"
-              // priority
-              quality={100}
-              fill
-              placeholder="blur"
-              blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8fwYAAtABzbrmHzgAAAAASUVORK5CYII="
-            />
-            <Image
-              src="https://i.ibb.co/Kbj76cj/kids-shoes3.jpg"
-              alt="kids shoes"
-              // priority
-              quality={100}
-              fill
-              placeholder="blur"
-              blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8fwYAAtABzbrmHzgAAAAASUVORK5CYII="
-            />
-          </div>
-          <div data-hero-grid-child data-hero-product-title="men-clothes">
-            <Image
-              src="https://i.ibb.co/NSw7N5b/pexels-photo-5.jpg"
-              alt="kids shoes"
-              // priority
-              quality={100}
-              fill
-              placeholder="blur"
-              blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8fwYAAtABzbrmHzgAAAAASUVORK5CYII="
-            />
-            <Image
-              src="https://i.ibb.co/Kbj76cj/kids-shoes3.jpg"
-              alt="kids shoes"
-              // priority
-              quality={100}
-              fill
-              placeholder="blur"
-              blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8fwYAAtABzbrmHzgAAAAASUVORK5CYII="
-            />
-          </div>
-          <div data-hero-grid-child data-hero-product-title="featured-clothes">
-            <Image
-              src="https://i.ibb.co/VYbhCX9/kids1.jpg"
-              alt="kids shoes"
-              // priority
-              quality={100}
-              fill
-              placeholder="blur"
-              blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8fwYAAtABzbrmHzgAAAAASUVORK5CYII="
-            />
-            <Image
-              src="https://i.ibb.co/Kbj76cj/kids-shoes3.jpg"
-              alt="kids shoes"
-              // priority
-              quality={100}
-              fill
-              placeholder="blur"
-              blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8fwYAAtABzbrmHzgAAAAASUVORK5CYII="
-            />
-          </div>
-          <div data-hero-grid-child data-hero-product-title="featured-shoes">
-            <Image
-              src="https://i.ibb.co/QM6KDh9/shoes4.jpg"
-              alt="kids shoes"
-              // priority
-              quality={100}
-              fill
-              placeholder="blur"
-              blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8fwYAAtABzbrmHzgAAAAASUVORK5CYII="
-            />
-            <Image
-              src="https://i.ibb.co/Kbj76cj/kids-shoes3.jpg"
-              alt="kids shoes"
-              // priority
-              quality={100}
-              fill
-              placeholder="blur"
-              blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8fwYAAtABzbrmHzgAAAAASUVORK5CYII="
-            />
-          </div> */}
         </div>
       </section>
     </>
