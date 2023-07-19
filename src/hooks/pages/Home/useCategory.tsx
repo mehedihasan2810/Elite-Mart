@@ -2,30 +2,13 @@ import throttle from "@/decorators/throttle";
 import getDomElement from "@/utilities/getDomElement";
 import getDomElements from "@/utilities/getDomElements";
 import matchMedia from "@/utilities/matchMedia";
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 import React, { MouseEvent, useLayoutEffect, useState } from "react";
-
-gsap.registerPlugin(ScrollTrigger);
 
 type SliderDataType = "trending" | "best-sellers" | "best-rated";
 const useCategory = () => {
   const [sliderData, setSliderData] = useState<SliderDataType>("trending");
 
   useLayoutEffect(() => {
-    //  animate category header with gsap
-    const tl = gsap.timeline({ paused: true });
-    tl.to("#category-header-mask", { clipPath: "inset(0 0 0 100%)" });
-
-    ScrollTrigger.create({
-      animation: tl,
-      trigger: "#category-header-mask",
-      start: "bottom bottom",
-      end: "top 10%",
-      scrub: true,
-    });
-    //
-
     // headerBtns handler
     const { elements: headerBtns } = getDomElements(
       "[data-header-btns] > button"

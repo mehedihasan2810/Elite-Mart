@@ -1,8 +1,12 @@
-import React from "react";
+import React, { useLayoutEffect } from "react";
 import styles from "@/scss/pages-styles/Home/Category.module.scss";
 import useCategory from "@/hooks/pages/Home/useCategory";
 import { nanoid } from "@reduxjs/toolkit";
 import Image from "next/image";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { gsap } from "gsap";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const headerBtnData = [
   {
@@ -122,6 +126,22 @@ const sliderBestRatedData = [
 const Category = () => {
   // rest of the logical code separated inside of this useCategory hook
   const sliderData = useCategory();
+
+
+  useLayoutEffect(() => {
+     //  animate category header with gsap
+     const tl = gsap.timeline({ paused: true });
+     tl.to("#category-header-mask", { clipPath: "inset(0 0 0 100%)" });
+ 
+     ScrollTrigger.create({
+       animation: tl,
+       trigger: "#category-header-mask",
+       start: "bottom bottom",
+       end: "top 5%",
+       scrub: true,
+     });
+     //
+  }, [])
 
   return (
     <section className={styles.category_container}>

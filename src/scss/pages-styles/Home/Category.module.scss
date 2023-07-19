@@ -2,10 +2,6 @@
   max-width: 1800px;
   margin-inline: auto;
   margin-block-start: 150px;
-  margin-block-end: 150px;
-
-  .slider_container {
-  }
 
   .category_headers {
     width: max-content;
@@ -53,7 +49,7 @@
     border: none;
   }
 
-  .category_headers button:hover{
+  .category_headers button:hover {
     opacity: 0.8;
   }
 

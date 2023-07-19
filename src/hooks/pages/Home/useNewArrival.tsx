@@ -82,7 +82,7 @@ const useNewArrival = () => {
       animation: tl,
       trigger: "#arrival-header-mask",
       start: "bottom bottom",
-      end: "top 10%",
+      end: "top 5%",
       scrub: true,
     });
     //
