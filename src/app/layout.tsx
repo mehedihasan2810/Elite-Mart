@@ -9,6 +9,7 @@ import Navbar from "@/components/shared-components/Navbar/Navbar";
 import Lenis from "@studio-freight/lenis";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { gsap } from "gsap";
+import Footer from "@/components/shared-components/Footer";
 const lenis = new Lenis();
 
 const work_Sans = Work_Sans({
@@ -42,6 +43,7 @@ export default function RootLayout({
         {/* <Provider store={store}> */}
         <Navbar />
         {children}
+        <Footer/>
         {/* </Provider> */}
       </body>
     </html>
