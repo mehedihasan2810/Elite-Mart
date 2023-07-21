@@ -1,5 +1,5 @@
 .favorites_container {
-  margin-block: 150px;
+  margin-block-start: 150px;
 
   .favorites_headers {
     width: max-content;
@@ -53,12 +53,14 @@
 
   .favorites_wrapper {
     background-color: #000;
-    padding-block: 3rem;
+    padding-block: 3.5rem;
+    width: min(2000px, 100vw);
+    margin-inline: auto;
   }
 
   .favorites_grid {
     height: 80vh;
-    width: 95vw;
+    width: min(1900px, 95vw);
     margin-inline: auto;
     display: grid;
     grid-template-columns: repeat(3, 1fr);

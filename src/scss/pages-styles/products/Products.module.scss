@@ -1,0 +1,32 @@
+.products_container {
+  width: min(1800px, 97vw);
+  margin-inline: auto;
+
+  .products_header {
+    display: flex;
+    justify-content: space-between;
+    margin-block-start: 2rem;
+    margin-block-end: 1rem;
+  }
+
+  .products_title {
+    display: flex;
+    gap: 0.5rem;
+  }
+
+  .products_title > :last-child {
+    align-self: flex-end;
+  }
+
+  .filter_sort_wrapper {
+    display: flex;
+    gap: 2rem;
+    font-size: 1.5rem;
+  }
+
+  .products_grid_container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 2rem 1rem;
+  }
+}

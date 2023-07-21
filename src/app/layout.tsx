@@ -1,5 +1,5 @@
 "use client";
-import React, { useLayoutEffect } from "react";
+import React, { useEffect } from "react";
 // import './globals.css'
 import "@/scss/globals.scss";
 import { Work_Sans } from "next/font/google";
@@ -26,7 +26,7 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  useLayoutEffect(() => {
+  useEffect(() => {
     // enable smooth scrolling with lenis
     lenis.on("scroll", ScrollTrigger.update);
 
