@@ -6,9 +6,14 @@ const UpperNavbar = () => {
   return (
     <div className={styles.upperNavbar_container}>
       <div>
-
         <div>
-          <Image data-testid='flag' src="us.svg" width={25} height={25} alt="us flag" />
+          <Image
+            data-testid="flag"
+            src="us.svg"
+            width={25}
+            height={25}
+            alt="us flag"
+          />
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -45,18 +50,17 @@ const UpperNavbar = () => {
       </div>
       <ul role="list">
         <li>
-        <Link href="#">Sign In</Link>
+          <Link href="/api/auth/signin">Sign In</Link>
         </li>
-       <li>
-       <Link href="#">Sign Up</Link>
-       </li>
-       <li>
-       <Link href="#">Our Stores</Link>
-       </li>
         <li>
-        <Link href="#">Help</Link>
+          <Link href="/api/auth/signout">Sign Out</Link>
         </li>
-       
+        <li>
+          <Link href="#">Our Stores</Link>
+        </li>
+        <li>
+          <Link href="#">Help</Link>
+        </li>
       </ul>
     </div>
   );

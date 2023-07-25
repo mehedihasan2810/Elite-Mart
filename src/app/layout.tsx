@@ -1,16 +1,9 @@
-"use client";
-import React, { useEffect } from "react";
-// import './globals.css'
+import React from "react";
 import "@/scss/globals.scss";
 import { Work_Sans } from "next/font/google";
-// import { Provider } from "react-redux";
-// import { store } from "@/redux/store";
 import Navbar from "@/components/shared-components/Navbar/Navbar";
-import Lenis from "@studio-freight/lenis";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { gsap } from "gsap";
 import Footer from "@/components/shared-components/Footer";
-const lenis = new Lenis();
+import Providers from "@/providers/providers";
 
 const work_Sans = Work_Sans({
   subsets: ["latin"],
@@ -26,25 +19,14 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  useEffect(() => {
-    // enable smooth scrolling with lenis
-    lenis.on("scroll", ScrollTrigger.update);
-
-    gsap.ticker.add((time) => {
-      lenis.raf(time * 1000);
-    });
-
-    gsap.ticker.lagSmoothing(0);
-  }, []);
-
   return (
     <html lang="en">
       <body className={work_Sans.className}>
-        {/* <Provider store={store}> */}
-        <Navbar />
-        {children}
-        <Footer/>
-        {/* </Provider> */}
+        <Providers>
+          <Navbar />
+          {children}
+          <Footer />
+        </Providers>
       </body>
     </html>
   );
