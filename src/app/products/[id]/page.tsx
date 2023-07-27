@@ -14,15 +14,21 @@ const ProductDetails = ({ params }: { params: { id: string } }) => {
     isError,
   } = useGetProductQuery(params.id);
 
-
-
-function addProductIdsToCookies() {
-  console.log(productData.data._id)
-}
-
-
-
-
+  function addProductIdsToCookies() {
+    const id: string = productData.data._id;
+    if (!localStorage.getItem("cart")) {
+      localStorage.setItem("cart", JSON.stringify([id]));
+    } else {
+      const cart = JSON.parse(localStorage.getItem("cart") as string);
+      if (cart.includes(id)) {
+        return;
+      } else {
+        const cartCloned = cart.slice();
+        cartCloned.push(id);
+        localStorage.setItem("cart", JSON.stringify(cartCloned));
+      }
+    }
+  }
 
   const { handleOptionImg, pushDisplayImgRef, pushOptionImgRef } =
     useProductDetails();
@@ -86,13 +92,25 @@ function addProductIdsToCookies() {
 
         <div className={styles.product_details_right_wrapper}>
           <h2 className={styles.product_details_title}>
-            {isLoading ? <Skeleton /> : productData.data.name}
+            {isLoading ? (
+              <Skeleton style={{ width: "70%" }} />
+            ) : (
+              productData.data.name
+            )}
           </h2>
           <h2 className={styles.product_details_category}>
-            {isLoading ? <Skeleton /> : productData.data.categories_1}
+            {isLoading ? (
+              <Skeleton style={{ width: "50%" }} />
+            ) : (
+              productData.data.categories_1
+            )}
           </h2>
           <div className={styles.product_details_price}>
-            {isLoading ? <Skeleton /> : `$${productData.data.price}`}
+            {isLoading ? (
+              <Skeleton style={{ width: "40%" }} />
+            ) : (
+              `$${productData.data.price}`
+            )}
           </div>
 
           <div className={styles.sizes_container}>
@@ -115,7 +133,9 @@ function addProductIdsToCookies() {
 
           <div className={styles.btns}>
             <button>Buy Now</button>
-            <button disabled={isLoading} onClick={addProductIdsToCookies}>Add To Cart</button>
+            <button disabled={isLoading} onClick={addProductIdsToCookies}>
+              Add To Cart
+            </button>
             <button>Add To Favorite</button>
           </div>
         </div>
