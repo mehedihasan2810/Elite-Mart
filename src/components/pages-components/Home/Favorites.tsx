@@ -42,7 +42,6 @@ const Favorites = () => {
             <Image
               src="https://i.ibb.co/myq7V9y/favorite3.jpg"
               alt="a group of model having fun wearing our most favorite clothes of this month"
-              priority
               quality={100}
               fill
               placeholder="blur"
@@ -53,7 +52,6 @@ const Favorites = () => {
             <Image
               src="https://i.ibb.co/Xs1BR7g/favorite1.jpg"
               alt="a group of model having fun wearing our most favorite clothes of this month"
-              priority
               quality={100}
               fill
               placeholder="blur"
@@ -64,7 +62,6 @@ const Favorites = () => {
             <Image
               src="https://i.ibb.co/3Y5CkX7/favorite2.jpg"
               alt="a group of model having fun wearing our most favorite clothes of this month"
-              priority
               quality={100}
               fill
               placeholder="blur"

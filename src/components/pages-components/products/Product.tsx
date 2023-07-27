@@ -12,7 +12,6 @@ const Product = (product: ProductType) => {
           <Image
             src={image_url}
             alt={name}
-            priority
             quality={100}
             fill
             placeholder="blur"

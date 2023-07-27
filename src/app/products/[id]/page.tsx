@@ -52,7 +52,6 @@ const ProductDetails = ({ params }: { params: { id: string } }) => {
                   data-display-img={index}
                   ref={pushDisplayImgRef}
                   alt="jacket"
-                  priority
                   quality={100}
                   fill
                   placeholder="blur"
@@ -78,7 +77,6 @@ const ProductDetails = ({ params }: { params: { id: string } }) => {
                       ref={pushOptionImgRef}
                       onPointerEnter={handleOptionImg}
                       alt="jacket"
-                      priority
                       data-display-option-img={index}
                       quality={100}
                       fill

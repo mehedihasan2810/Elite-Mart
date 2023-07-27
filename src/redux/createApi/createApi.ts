@@ -7,9 +7,13 @@ export const dataApi = createApi({
 
   endpoints: (builder) => ({
     getProduct: builder.query({
-      query: (name) => `api/products/${name}`,
+      query: (id: string) => `api/products/${id}`,
     }),
+
+    getCartProducts: builder.query({
+      query: (ids: string[] | null) => `/api/cart?ids=${ids?.join(',')}`
+    })
   }),
 });
 
-export const { useGetProductQuery } = dataApi;
+export const { useGetProductQuery, useGetCartProductsQuery } = dataApi;

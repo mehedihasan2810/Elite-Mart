@@ -127,34 +127,34 @@ const Category = () => {
   // rest of the logical code separated inside of this useCategory hook
   const sliderData = useCategory();
 
-
   useLayoutEffect(() => {
-     //  animate category header with gsap
-     const tl = gsap.timeline({ paused: true });
-     tl.to("#category-header-mask", { clipPath: "inset(0 0 0 100%)" });
- 
-     ScrollTrigger.create({
-       animation: tl,
-       trigger: "#category-header-mask",
-       start: "bottom bottom",
-       end: "top 5%",
-       scrub: true,
-     });
-     //
-  }, [])
+    //  animate category header with gsap
+    const tl = gsap.timeline({ paused: true });
+    tl.to("#category-header-mask", { clipPath: "inset(0 0 0 100%)" });
+
+    ScrollTrigger.create({
+      animation: tl,
+      trigger: "#category-header-mask",
+      start: "bottom bottom",
+      end: "top 5%",
+      scrub: true,
+    });
+    //
+  }, []);
 
   return (
     <section className={styles.category_container}>
       <div className={styles.category_headers}>
         <div className={styles.category_headers_wrapper}>
-        <h2>Get 50% Off</h2>
-        <h2 id="category-header-mask" className={styles.category_header_mask}>Get 50% Off</h2>
-
+          <h2>Get 50% Off</h2>
+          <h2 id="category-header-mask" className={styles.category_header_mask}>
+            Get 50% Off
+          </h2>
         </div>
         <p>On all our Trending, Best Sellers and Best Rated</p>
-           <button>Grab Yours Now</button>
+        <button>Grab Yours Now</button>
       </div>
-      
+
       <div className={styles.slider_container}>
         <div className={styles.slider_btns_wrapper}>
           <div data-header-btns className={styles.header_btns}>
@@ -222,7 +222,6 @@ const Category = () => {
                   <Image
                     src={data.url}
                     alt={data.url}
-                    priority
                     quality={100}
                     fill
                     placeholder="blur"
@@ -246,7 +245,6 @@ const Category = () => {
                   <Image
                     src={data.url}
                     alt={data.url}
-                    priority
                     quality={100}
                     fill
                     placeholder="blur"
@@ -272,7 +270,6 @@ const Category = () => {
                   <Image
                     src={data.url}
                     alt={data.url}
-                    priority
                     quality={100}
                     fill
                     placeholder="blur"
