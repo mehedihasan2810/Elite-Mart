@@ -23,7 +23,7 @@ const optionImgs = [
 
 
 const ProductDetails = ({params}: {params: {id: string}}) => {
-
+console.log('paramssssssssssssss' + params.id)
 
   const { handleOptionImg, pushDisplayImgRef, pushOptionImgRef} = useProductDetails();
 

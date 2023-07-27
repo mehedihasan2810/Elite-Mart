@@ -1,14 +1,17 @@
+import { ProductType } from "@/app/products/page";
 import styles from "@/scss/pages-styles/products/Product.module.scss";
 import Image from "next/image";
 import Link from "next/link";
-const Product = () => {
+const Product = (product: ProductType) => {
+  const { _id, name, image_url, price, categories_1, product_status } = product;
+  console.log(product);
   return (
     <figure className={styles.product_container}>
-      <Link href="#">
+      <Link href={`/products/${_id}`}>
         <div className={styles.product_img_wrapper}>
           <Image
-            src="https://i.ibb.co/4WQHkBN/slider11.jpg"
-            alt="shoes"
+            src={image_url}
+            alt={name}
             priority
             quality={100}
             fill
@@ -20,13 +23,13 @@ const Product = () => {
         <figcaption>
           <div className={styles.product_desc}>
             <div className={styles.product_desc_left}>
-              <p className={styles.product_status}>Best Seller</p>
-              <p className={styles.product_title}>Nike Air Force 007</p>
-              <p className={styles.product_category}>Mens Shoes</p>
+              <p className={styles.product_status}>{product_status}</p>
+              <p className={styles.product_title}>{name}</p>
+              <p className={styles.product_category}>{categories_1}</p>
             </div>
 
             <div className={styles.product_desc_right}>
-              <p className={styles.product_price}>$20</p>
+              <p className={styles.product_price}>${price}</p>
               <button className={styles.product_favorite}>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
