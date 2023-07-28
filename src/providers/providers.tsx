@@ -4,10 +4,13 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { SessionProvider } from "next-auth/react";
 import React, { useEffect } from "react";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 const lenis = new Lenis();
 
 import { Provider } from "react-redux";
 import { store } from "@/redux/store";
+
 const Providers = ({ children }: { children: React.ReactNode }) => {
   useEffect(() => {
     // enable smooth scrolling with lenis
@@ -21,7 +24,10 @@ const Providers = ({ children }: { children: React.ReactNode }) => {
   }, []);
   return (
     <SessionProvider>
-      <Provider store={store}>{children}</Provider>
+      <Provider store={store}>
+        {children}
+        <ToastContainer />
+      </Provider>
     </SessionProvider>
   );
 };

@@ -5,19 +5,45 @@ import Image from "next/image";
 import useCart from "@/hooks/pages/Cart/useCart";
 import { useGetCartProductsQuery } from "@/redux/createApi/createApi";
 import { ProductType } from "../products/page";
+import { toast } from "react-toastify";
 import Skeleton from "react-loading-skeleton";
 import "react-loading-skeleton/dist/skeleton.css";
 
 const Cart = () => {
-  const cartProductIds: string[] | null =
-    localStorage.getItem("cart") &&
-    JSON.parse(localStorage.getItem("cart") as string);
+  function getCartProductIds() {
+    const cartProductIds: string[] | null =
+      localStorage.getItem("cart") &&
+      JSON.parse(localStorage.getItem("cart") as string);
+    return cartProductIds;
+  }
 
-  console.log(cartProductIds);
+  const { data, isLoading, isError, refetch } = useGetCartProductsQuery(
+    getCartProductIds(),
+    {
+      skip: !getCartProductIds(),
+    }
+  );
 
-  const { data, isLoading, isError } = useGetCartProductsQuery(cartProductIds, {
-    skip: !cartProductIds,
-  });
+  function handleRemoveCartProduct(id: string) {
+    const cartProductIds = getCartProductIds();
+    if (cartProductIds) {
+      console.log(id);
+      const arr = cartProductIds.filter((cartId) => cartId !== id);
+      if (arr.length) {
+        localStorage.setItem("cart", JSON.stringify(arr));
+        refetch();
+        toast.success("Removed Succesfully", {
+          autoClose: 2000,
+        });
+      } else {
+        localStorage.clear();
+        refetch();
+        toast.success("Removed Succesfully", {
+          autoClose: 2000,
+        });
+      }
+    }
+  }
 
   const { totalWrapperRef, cartWrapperRef } = useCart();
 
@@ -30,11 +56,11 @@ const Cart = () => {
       <section className={styles.cart_container}>
         <div ref={cartWrapperRef} className={styles.left_container}>
           <div className={styles.cart_item_count}>
-            {cartProductIds
+            {getCartProductIds()
               ? `You have added ${
                   isLoading ? "0" : data?.cartProducts?.length
                 } product in the cart`
-              : `You have not added any product yet!`}
+              : `You have added 0 product in the cart!`}
           </div>
           {isLoading
             ? Array.from({ length: 3 }).map((_, index) => (
@@ -100,7 +126,7 @@ const Cart = () => {
                   </div>
                 </div>
               ))
-            : cartProductIds &&
+            : getCartProductIds() &&
               data.success &&
               data.cartProducts.map((product: ProductType) => (
                 <div key={product._id} className={styles.cart_item}>
@@ -122,7 +148,7 @@ const Cart = () => {
                       <div>White</div>
 
                       <div className={styles.btns_wrapper}>
-                        <button>
+                        <button disabled>
                           <svg
                             xmlns="http://www.w3.org/2000/svg"
                             fill="none"
@@ -138,7 +164,9 @@ const Cart = () => {
                             />
                           </svg>
                         </button>
-                        <button>
+                        <button
+                          onClick={() => handleRemoveCartProduct(product._id)}
+                        >
                           <svg
                             xmlns="http://www.w3.org/2000/svg"
                             fill="none"
@@ -170,17 +198,47 @@ const Cart = () => {
           <div className={styles.total_delivery_charge}>
             <div>
               <div>Subtotal</div>
-              <div>$200</div>
+              <div>
+                {" "}
+                {getCartProductIds()
+                  ? `$${
+                      isLoading
+                        ? "00"
+                        : data?.cartProducts?.reduce(
+                            (acc: number, product: ProductType) =>
+                              acc + product.price,
+                            0
+                          )
+                    }`
+                  : `$00`}
+              </div>
             </div>
             <div>
               <div>Delivery Charge</div>
-              <div>$20</div>
+              <div>
+                {getCartProductIds()
+                  ? `$${isLoading ? "00" : data?.cartProducts?.length * 5}`
+                  : `$00`}
+              </div>
             </div>
           </div>
 
           <div className={styles.total_wrapper}>
             <div>Total</div>
-            <div>$220</div>
+            <div>
+              {getCartProductIds()
+                ? `$${
+                    isLoading
+                      ? "00"
+                      : data?.cartProducts?.reduce(
+                          (acc: number, product: ProductType) =>
+                            acc + product.price,
+                          0
+                        ) +
+                        data?.cartProducts?.length * 5
+                  }`
+                : `$00`}
+            </div>
           </div>
 
           {/* <div className={styles.btns}> */}

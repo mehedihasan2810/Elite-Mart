@@ -11,7 +11,7 @@
     height: fit-content;
   }
 
-  .cart_item_count{
+  .cart_item_count {
     font-size: 1.2rem;
     font-weight: 500;
   }
@@ -60,12 +60,10 @@
     button {
       border: none;
       background-color: transparent;
-      padding: 0;
       width: 38px;
       height: 38px;
-      // background-color: #0000001d;
       border-radius: 50%;
-      padding: 0.3rem;
+      padding: 0.4rem;
       cursor: pointer;
     }
 
