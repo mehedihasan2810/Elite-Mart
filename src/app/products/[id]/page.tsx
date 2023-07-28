@@ -5,6 +5,7 @@ import Image from "next/image";
 import useProductDetails from "@/hooks/pages/ProductDetails/useProductDetails";
 import { useGetProductQuery } from "@/redux/createApi/createApi";
 import Skeleton from "react-loading-skeleton";
+import { toast } from "react-toastify";
 import "react-loading-skeleton/dist/skeleton.css";
 
 const ProductDetails = ({ params }: { params: { id: string } }) => {
@@ -18,14 +19,24 @@ const ProductDetails = ({ params }: { params: { id: string } }) => {
     const id: string = productData.data._id;
     if (!localStorage.getItem("cart")) {
       localStorage.setItem("cart", JSON.stringify([id]));
+
+      toast.success("Added Succesfully", {
+        autoClose: 2000,
+      });
     } else {
       const cart = JSON.parse(localStorage.getItem("cart") as string);
       if (cart.includes(id)) {
+        toast.warning("You have Already Added This One!", {
+          autoClose: 2000,
+        });
         return;
       } else {
         const cartCloned = cart.slice();
         cartCloned.push(id);
         localStorage.setItem("cart", JSON.stringify(cartCloned));
+        toast.success("Added Succesfully", {
+          autoClose: 2000,
+        });
       }
     }
   }
