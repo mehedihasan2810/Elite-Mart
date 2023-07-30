@@ -1,6 +1,4 @@
 .hero_container {
-  // padding-block: 100px;
-  // border: 1px solid blue;
   padding-inline: 0.5rem;
 
   .hero_grid {
@@ -21,7 +19,7 @@
       will-change: clip-path;
       clip-path: circle(0% at -50% -50%);
 
-      transition: clip-path 500ms ease-out;
+      transition: clip-path 350ms ease-out;
     }
 
     > div:nth-child(1) {
@@ -81,7 +79,7 @@
     will-change: transform;
     pointer-events: none;
     transform: translate3d(-50%, -50%, 0);
-    transition: opacity 100ms ease-in;
+    transition: opacity 80ms ease-in;
   }
 
   .moving_cursor {
@@ -135,59 +133,31 @@
       grid-template-rows: repeat(5, 1fr);
 
       > div:nth-child(5),
-      > div:nth-child(6),
-      > div:nth-child(7),
-      > div:nth-child(8) {
+      > div:nth-child(6) {
         display: none;
       }
     }
   }
 }
-@media (max-width: 1024px) {
-  .hero_container {
-    .hero_grid {
-      grid-template-columns: repeat(4, 1fr);
-      grid-template-rows: repeat(5, 1fr);
 
-      > div:nth-child(5),
-      > div:nth-child(6),
-      > div:nth-child(7),
-      > div:nth-child(8) {
-        display: none;
-      }
-    }
-  }
-}
 @media (max-width: 768px) {
   .hero_container {
     .hero_grid {
-      height:1200px;
+      height: 1200px;
       grid-template-columns: repeat(1, 1fr);
       grid-template-rows: repeat(5, 1fr);
 
-
       > div:nth-child(1) {
-        // height: 100;
         grid-column: 1 / span 1;
         grid-row: 1 / span 2;
       }
-  
+
       > div:nth-child(2) {
-        // height: 600px;
         grid-column: 1 / span 1;
         grid-row: 3 / -1;
       }
-      > div:nth-child(3) {
-        display: none;
-      }
+      > div:nth-child(3),
       > div:nth-child(4) {
-       display: none;
-      }
-
-      > div:nth-child(5),
-      > div:nth-child(6),
-      > div:nth-child(7),
-      > div:nth-child(8) {
         display: none;
       }
     }

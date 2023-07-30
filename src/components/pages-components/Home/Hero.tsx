@@ -66,8 +66,6 @@ const heroProductData = [
 ];
 
 const Hero = () => {
-  // const heroGridRef = useRef<HTMLDivElement>(null!);
-
   const { handleHeroGridPointerOver, handleHeroGridPointerLeave } = useHero();
 
   return (
@@ -95,7 +93,6 @@ const Hero = () => {
         <div
           onPointerOver={handleHeroGridPointerOver}
           onPointerLeave={handleHeroGridPointerLeave}
-          // ref={heroGridRef}
           data-hero-grid-element
           className={styles.hero_grid}
         >

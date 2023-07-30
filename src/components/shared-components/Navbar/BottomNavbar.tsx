@@ -6,8 +6,12 @@ import { submenuData } from "./submenu-data";
 import SubMenu from "./SubMenu";
 import Search from "./Search";
 import Link from "next/link";
+import { useDispatch } from "react-redux";
+import { visibleSidebar } from "@/redux/createSlices/createSlice";
 
 const BottomNavbar = () => {
+  const dispatch = useDispatch();
+
   const handleCloseSubmenu = (event: React.PointerEvent<HTMLButtonElement>) => {
     // close the submenu and hover style on pointer leave from target nav
     const targetElement = event.currentTarget as HTMLButtonElement;
@@ -105,40 +109,49 @@ const BottomNavbar = () => {
     const submenu_elements = document.querySelectorAll("[data-submenu]");
 
     // calculate the submenu position n place them right
-    nav_link_elements.forEach((btn) => {
-      const btnElement = btn as HTMLButtonElement;
+    function setSubmenuCoords() {
+      nav_link_elements.forEach((btn) => {
+        const btnElement = btn as HTMLButtonElement;
 
-      submenu_elements.forEach((menuElement) => {
-        const submenuElement = menuElement as HTMLElement;
+        submenu_elements.forEach((menuElement) => {
+          const submenuElement = menuElement as HTMLElement;
 
-        if (btnElement.dataset.navLink === submenuElement.dataset.submenu) {
-          const { left, right, bottom } = btnElement.getBoundingClientRect();
+          if (btnElement.dataset.navLink === submenuElement.dataset.submenu) {
+            const { left, right, bottom } = btnElement.getBoundingClientRect();
 
-          submenuElement.style.left = `${(left + right) / 2}px`;
-          submenuElement.style.top = `${bottom}px`;
-        }
+            submenuElement.style.left = `${(left + right) / 2}px`;
+            submenuElement.style.top = `${bottom}px`;
+          }
+        });
       });
-    });
+    }
+
+    setSubmenuCoords();
+
+    window.addEventListener("scroll", setSubmenuCoords);
+
+    return () => removeEventListener("scroll", setSubmenuCoords);
   }, []);
 
   return (
     <>
       <nav className={styles.bottom_navbar_container}>
         <div>
-          <p>Elite Mart</p>
+          <div className={styles.navbar_logo}>
+            <Link href="/">Elite Mart</Link>
+          </div>
 
-          <ul role="list">
+          <ul role="list" data-main-nav>
             {submenuData.map((item) => {
               const { pageId, page } = item;
 
               return (
-                <li key={pageId}>
+                <li key={pageId} data-classname={item.page.toLowerCase()}>
                   <button
                     data-nav-link={item.page.toLowerCase()}
                     onPointerEnter={handleShowSubmenu}
                     onPointerLeave={handleCloseSubmenu}
-
-                    data-testid='main-nav-link'
+                    data-testid="main-nav-link"
                   >
                     <span>{page}</span>
                     <svg
@@ -163,28 +176,46 @@ const BottomNavbar = () => {
         </div>
 
         <div>
-          <Search />
+          <div className={styles.search_wrapper}>
+            <Search />
+            <button>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                strokeWidth={1.5}
+                stroke="currentColor"
+                className="w-6 h-6"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"
+                />
+              </svg>
+            </button>
+          </div>
 
-          <button>
-           <Link href='/cart'>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              strokeWidth={1.5}
-              stroke="currentColor"
-              className="w-6 h-6"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 00-16.536-1.84M7.5 14.25L5.106 5.272M6 20.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm12.75 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0z"
-              />
-            </svg>
+          <button className={styles.btn_cart}>
+            <Link href="/cart">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                strokeWidth={1.5}
+                stroke="currentColor"
+                className="w-6 h-6"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 00-16.536-1.84M7.5 14.25L5.106 5.272M6 20.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm12.75 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0z"
+                />
+              </svg>
             </Link>
           </button>
 
-          <button>
+          <button className={styles.btn_favorite}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -201,6 +232,28 @@ const BottomNavbar = () => {
             </svg>
           </button>
         </div>
+
+        <button
+          onClick={() => {
+            dispatch(visibleSidebar());
+          }}
+          className={styles.btn_hamburger}
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            strokeWidth={1.5}
+            stroke="currentColor"
+            className="w-6 h-6"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+            />
+          </svg>
+        </button>
       </nav>
 
       {/* mapping submenu component */}

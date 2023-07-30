@@ -1,0 +1,128 @@
+@use "@/scss/utils/variables" as v;
+.sidebar_bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  width: 100vw;
+  height: 100vh;
+  background-color: #00000088;
+  cursor: pointer;
+  visibility: hidden;
+  transition: visibility 200ms ease-out;
+}
+.sidebar_container {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 1000;
+  background-color: #fff;
+  height: 100vh;
+  width: min(400px, 100vw);
+  transform: translate3d(100%, 0, 0);
+  transition: transform 200ms ease-in;
+  cursor: auto;
+}
+
+.hide_sidebar_btn_wrapper {
+  button {
+    width: 40px;
+    height: 40px;
+    background-color: transparent;
+    border-radius: 50%;
+    border: none;
+    padding: 0.3rem;
+    margin: 1rem;
+    cursor: pointer;
+  }
+
+  button:hover {
+    background-color: rgba(128, 128, 128, 0.281);
+  }
+}
+
+.sidebar_menu {
+  padding-inline: 2rem;
+
+  li {
+    margin-block-end: 1rem;
+  }
+
+  button {
+    background-color: transparent;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    width: 100%;
+
+    span {
+      display: inline-block;
+      font-size: 1.5rem;
+      font-weight: 600;
+    }
+  }
+
+  svg {
+    width: 25px;
+    height: 30px;
+  }
+}
+
+.sub_sidebar_menu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 1001;
+  background-color: #fff;
+  height: 100vh;
+  width: min(400px, 100vw);
+  padding: 2rem;
+  transform: translate3d(100%, 0, 0);
+  transition: transform 200ms ease-in;
+
+  > button {
+    display: flex;
+    align-items: center;
+    width: fit-content;
+
+    > span {
+      font-size: 1.2rem;
+      font-weight: 500;
+    }
+  }
+}
+
+.sub_sidebar_menu_wrapper {
+  margin-block-start: 1.5rem;
+
+  > div {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-block-end: 1rem;
+  }
+
+  li {
+    // line-height: 1;
+    margin-block-end: 0.5rem;
+  }
+
+  a {
+    font-size: 1.1rem;
+    color: v.$color-slate-light;
+  }
+
+  a:hover {
+    color: #000;
+  }
+}
+
+@media (max-width: 992px) {
+  .sidebar_bg {
+    // visibility: visible;
+  }
+  .sidebar_container {
+    // transform: translate3d(0%, 0, 0);
+  }
+}

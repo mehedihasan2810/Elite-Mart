@@ -11,22 +11,22 @@ const Footer = () => {
 
           <ul>
             <li>
-              <Link href="#">Clothing</Link>
+              <Link href="/products">Clothing</Link>
             </li>
             <li>
-              <Link href="#">Shoes</Link>
+              <Link href="/products">Shoes</Link>
             </li>
             <li>
-              <Link href="#">New Arrival</Link>
+              <Link href="/products">New Arrival</Link>
             </li>
             <li>
-              <Link href="#">Trending</Link>
+              <Link href="/products">Trending</Link>
             </li>
             <li>
-              <Link href="#">Best Sellers</Link>
+              <Link href="/products">Best Sellers</Link>
             </li>
             <li>
-              <Link href="#">Best Rated</Link>
+              <Link href="/products">Best Rated</Link>
             </li>
           </ul>
         </li>
@@ -37,19 +37,19 @@ const Footer = () => {
 
           <ul>
             <li>
-              <Link href="#">Delivery</Link>
+              <Link href="/products">Delivery</Link>
             </li>
             <li>
-              <Link href="#">Returns</Link>
+              <Link href="/products">Returns</Link>
             </li>
             <li>
-              <Link href="#">Payment Options</Link>
+              <Link href="/products">Payment Options</Link>
             </li>
             <li>
-              <Link href="#">Order Status</Link>
+              <Link href="/products">Order Status</Link>
             </li>
             <li>
-              <Link href="#">Contact Us</Link>
+              <Link href="/products">Contact Us</Link>
             </li>
           </ul>
         </li>
@@ -60,19 +60,19 @@ const Footer = () => {
 
           <ul>
             <li>
-              <Link href="#">News</Link>
+              <Link href="/products">News</Link>
             </li>
             <li>
-              <Link href="#">Careers</Link>
+              <Link href="/products">Careers</Link>
             </li>
             <li>
-              <Link href="#">Investors</Link>
+              <Link href="/products">Investors</Link>
             </li>
             <li>
-              <Link href="#">Student Discount</Link>
+              <Link href="/products">Student Discount</Link>
             </li>
             <li>
-              <Link href="#">Sustainability</Link>
+              <Link href="/products">Sustainability</Link>
             </li>
           </ul>
         </li>

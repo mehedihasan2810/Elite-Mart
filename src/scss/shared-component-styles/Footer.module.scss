@@ -17,10 +17,12 @@
     font-size: 1.1rem;
   }
 
-  ul:first-child {
+  > ul:first-child {
     display: flex;
-    gap: 6rem;
-    width: fit-content;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 2rem;
+    max-inline-size: 900px;
     margin-inline: auto;
   }
 
@@ -32,8 +34,12 @@
 
   .footer_socials > li {
     background-color: gray;
-    padding: 0.1rem;
+    padding: 0.2rem;
     border-radius: 50%;
+  }
+
+  .footer_socials > li:hover {
+    background-color: rgba(128, 128, 128, 0.698);
   }
 
   > ul > li:not(:last-child) li {
@@ -56,7 +62,8 @@
 
   > ul:last-child ul {
     display: flex;
-    gap: 1.5rem;
+    flex-wrap: wrap;
+    gap: 1rem;
   }
 
   > ul:last-child ul li:hover {
@@ -64,7 +71,7 @@
   }
 
   svg {
-    width: 35px;
-    height: 35px;
+    width: 32px;
+    height: 32px;
   }
 }

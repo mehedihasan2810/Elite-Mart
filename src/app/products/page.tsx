@@ -63,7 +63,7 @@ const Products = async () => {
               <Product key={product._id} {...product} />
             ))
         ) : (
-          <h1>sorryyyyyyyyyyyyyyyyyy</h1>
+          <h1>Something Went Wrong!</h1>
         )}
       </div>
     </main>

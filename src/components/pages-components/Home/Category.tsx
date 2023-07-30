@@ -5,6 +5,7 @@ import { nanoid } from "@reduxjs/toolkit";
 import Image from "next/image";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { gsap } from "gsap";
+import Link from "next/link";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -144,15 +145,22 @@ const Category = () => {
 
   return (
     <section className={styles.category_container}>
-      <div className={styles.category_headers}>
-        <div className={styles.category_headers_wrapper}>
-          <h2>Get 50% Off</h2>
-          <h2 id="category-header-mask" className={styles.category_header_mask}>
-            Get 50% Off
-          </h2>
+      <div className={styles.category_headers_container}>
+        <div className={styles.category_headers}>
+          <div className={styles.category_headers_wrapper}>
+            <h2>Get 50% Off</h2>
+            <h2
+              id="category-header-mask"
+              className={styles.category_header_mask}
+            >
+              Get 50% Off
+            </h2>
+          </div>
+          <p>On all our Trending, Best Sellers and Best Rated</p>
+          <button>
+            <Link href="/products">Grab Yours Now</Link>{" "}
+          </button>
         </div>
-        <p>On all our Trending, Best Sellers and Best Rated</p>
-        <button>Grab Yours Now</button>
       </div>
 
       <div className={styles.slider_container}>

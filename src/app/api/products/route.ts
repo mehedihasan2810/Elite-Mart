@@ -9,6 +9,7 @@ export async function GET() {
       await dbConnect();
       const products = await ProductsCollection.find();
       return NextResponse.json({ success: true, data: products });
+      // return NextResponse.json({ success: true, data: 'foooooooooooooooo' });
     // } else {
     //   return NextResponse.json(
     //     { success: false, message: "authentication failed" },

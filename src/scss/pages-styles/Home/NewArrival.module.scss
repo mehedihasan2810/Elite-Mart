@@ -1,12 +1,16 @@
 @use "@/scss/placeholder-classes/placeholder-classes";
 .new_arrival_container {
-  width: 1800px;
-  margin-inline: auto;
   margin-block-start: 150px;
+
+  .new_arrival_headers_wrapper {
+    display: flex;
+    justify-content: center;
+    width: min(97vw, 1800px);
+    margin-inline: auto;
+  }
 
   .new_arrival_headers {
     width: max-content;
-    margin-inline: auto;
     margin-block-end: 30px;
     text-align: center;
   }
@@ -38,7 +42,7 @@
     clip-path: inset(0 0 0 0);
   }
 
-   button {
+  button {
     background-color: #000;
     color: #fff;
     border-radius: 9999px;
@@ -49,7 +53,7 @@
     border: none;
   }
 
-  button:hover{
+  button:hover {
     opacity: 0.8;
   }
 
@@ -58,12 +62,15 @@
     gap: 1rem;
     width: fit-content;
     padding: 0.5rem;
+
+    width: min(97vw, 1800px);
+    margin-inline: auto;
   }
 
   [data-arrival-small-img-wrapper] > div {
     position: relative;
-    width: 100px;
-    height: 100px;
+    width: 80px;
+    height: 80px;
     border-radius: 50%;
     transition: transform 300ms ease-in;
     cursor: pointer;
@@ -84,14 +91,14 @@
   }
 
   .arrival_img_wrapper {
-    width: 100%;
-    height: 90vh;
+    width: min(97vw, 1800px);
+    margin-inline: auto;
+    height: 85vh;
     position: relative;
-    border: 1px solid;
 
     img {
       width: 100%;
-      height: auto;
+      height: 100%;
       object-fit: cover;
       will-change: clip-path, -webkit-clip-path;
       transition: clip-path 1000ms ease-out, -webkit-clip-path 1000ms ease-out;
@@ -110,6 +117,27 @@
       -webkit-clip-path: circle(0% at 50% 50%);
       transition: clip-path 1000ms ease-out, -webkit-clip-path 1000ms ease-out;
       z-index: -1;
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .new_arrival_container {
+    .arrival_header_mask {
+      display: none;
+    }
+
+    h2 {
+      font-size: 3rem;
+    }
+
+    [data-arrival-small-img-wrapper] > div {
+      position: relative;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      transition: transform 300ms ease-in;
+      cursor: pointer;
     }
   }
 }

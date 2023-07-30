@@ -52,6 +52,7 @@ const useCategory = () => {
     });
 
     // check the media breakpoints
+    const { isMatchMedia: isMobile } = matchMedia("(max-width: 767px)");
     const { isMatchMedia: isTablet } = matchMedia("(min-width: 768px)");
     const { isMatchMedia: isLaptop } = matchMedia("(min-width: 1024px)");
     const { isMatchMedia: isLargeDesktop } = matchMedia("(min-width: 1600px)");
@@ -65,9 +66,34 @@ const useCategory = () => {
       "[data-category-slide]"
     );
 
+    function setInitialTranslateX() {
+      const categorySlide = categorySlides[0] as HTMLDivElement;
+
+      // calculating the initial translateX value of the slider
+      const initialTranslateX =
+        categorySlide.offsetWidth * (categorySlides.length / 3) -
+        categorySlide.offsetWidth / 2;
+      categorySlider.style.transitionDuration = "0ms";
+      categorySlider.style.transform = `translate3d(-${initialTranslateX}px, 0, 0)`;
+      //
+    }
+
     //  specify slide width and height according to breakpoints
     categorySlides.forEach((element) => {
       const categorySlide = element as HTMLDivElement;
+
+      if (isMobile) {
+        console.log("foo " + isMobile);
+
+        categorySlide.style.width = `${categorySliderWrapper.offsetWidth}px`;
+        categorySlide.style.height = `${categorySliderWrapper.offsetWidth}px`;
+
+        const initialTranslateX =
+          categorySlide.offsetWidth * (categorySlides.length / 3);
+        // categorySlider.style.transitionDuration = "0ms";
+        categorySlider.style.transform = `translate3d(-${initialTranslateX}px, 0, 0)`;
+      }
+
       if (isTablet) {
         categorySlide.style.width = `${
           categorySliderWrapper.offsetWidth / 2
@@ -75,6 +101,8 @@ const useCategory = () => {
         categorySlide.style.height = `${
           categorySliderWrapper.offsetWidth / 2
         }px`;
+
+        setInitialTranslateX();
       }
       if (isLaptop) {
         categorySlide.style.width = `${
@@ -83,6 +111,8 @@ const useCategory = () => {
         categorySlide.style.height = `${
           categorySliderWrapper.offsetWidth / 3
         }px`;
+
+        setInitialTranslateX();
       }
       if (isLargeDesktop) {
         categorySlide.style.width = `${
@@ -91,17 +121,10 @@ const useCategory = () => {
         categorySlide.style.height = `${
           categorySliderWrapper.offsetWidth / 4
         }px`;
+
+        setInitialTranslateX();
       }
     });
-    const categorySlide = categorySlides[0] as HTMLDivElement;
-
-    // calculating the initial translateX value of the slider
-    const initialTranslateX =
-      categorySlide.offsetWidth * (categorySlides.length / 3) -
-      categorySlide.offsetWidth / 2;
-    categorySlider.style.transitionDuration = "0ms";
-    categorySlider.style.transform = `translate3d(-${initialTranslateX}px, 0, 0)`;
-    //
 
     // slider_______
     const slidePrevBtn = document.querySelector(
@@ -129,14 +152,24 @@ const useCategory = () => {
         .split(", ")[4];
 
       // calculate the initial translateX position
-      const initialTranslateX =
-        slideWidth * (categorySlides.length / 3) - slideWidth / 2;
+      let initialTranslateX;
+      if (isMobile) {
+        initialTranslateX = slideWidth * (categorySlides.length / 3);
+      } else {
+        initialTranslateX =
+          slideWidth * (categorySlides.length / 3) - slideWidth / 2;
+      }
 
       if (targetDataValue === "prev") {
         //  reset the slider position
         if (-initialTranslateX === translateX) {
-          translateX =
-            slideWidth * ((categorySlides.length / 3) * 2) - slideWidth / 2;
+          if (isMobile) {
+            translateX = slideWidth * ((categorySlides.length / 3) * 2);
+          } else {
+            translateX =
+              slideWidth * ((categorySlides.length / 3) * 2) - slideWidth / 2;
+          }
+
           categorySlider.style.transitionDuration = "0ms";
           categorySlider.style.transform = `translate3d(${-translateX}px, 0, 0)`;
 
@@ -153,7 +186,6 @@ const useCategory = () => {
           categorySlider.style.transform = `translate3d(${
             translateX2 + slideWidth
           }px, 0, 0)`;
-          // categorySlider.style.transitionDuration = '300ms';
         } else {
           // set the transition and prev slider position
           categorySlider.style.transitionDuration = "300ms";
@@ -164,10 +196,22 @@ const useCategory = () => {
       }
 
       if (targetDataValue === "next") {
+        let nextInitialX;
+        if (isMobile) {
+          nextInitialX = initialTranslateX * 2;
+        } else {
+          nextInitialX = initialTranslateX * 2 + slideWidth / 2;
+        }
+
         // reset the slider position
-        if (-(initialTranslateX * 2 + slideWidth / 2) === translateX) {
-          translateX =
-            slideWidth * (categorySlides.length / 3) - slideWidth / 2;
+        if (-nextInitialX === translateX) {
+          if (isMobile) {
+            translateX = slideWidth * (categorySlides.length / 3);
+          } else {
+            translateX =
+              slideWidth * (categorySlides.length / 3) - slideWidth / 2;
+          }
+
           categorySlider.style.transitionDuration = "0ms";
           categorySlider.style.transform = `translate3d(${-translateX}px, 0, 0)`;
 

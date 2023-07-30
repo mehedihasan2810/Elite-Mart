@@ -4,6 +4,23 @@
   justify-content: space-between;
   align-items: center;
 
+  .navbar_logo {
+    > a {
+      font-size: 2rem;
+      font-weight: 900;
+      letter-spacing: 2px;
+    }
+
+    @supports (-webkit-text-stroke: 1px #000) {
+      a {
+        -webkit-text-stroke: 2px #000;
+        text-stroke: 1px #000;
+        -webkit-text-fill-color: transparent;
+        text-fill-color: transparent;
+      }
+    }
+  }
+
   > div,
   ul {
     display: flex;
@@ -35,7 +52,7 @@
   }
 
   > div:last-child {
-    gap: 2rem;
+    gap: 1.5rem;
   }
 
   button {
@@ -46,6 +63,68 @@
   svg {
     width: 25px;
     height: 25px;
+  }
+
+  .btn_cart,
+  .btn_favorite,
+  .btn_hamburger {
+    width: 40px;
+    height: 40px;
+    padding: 0.4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    cursor: pointer;
+
+    svg {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  :is(.btn_cart, .btn_favorite, .btn_hamburger):hover {
+    background-color: rgba(128, 128, 128, 0.281);
+  }
+
+  .btn_favorite,
+  .btn_hamburger {
+    margin-inline-start: 1rem;
+  }
+
+  .btn_hamburger {
+    display: none;
+  }
+
+  [data-search-input] {
+    margin-inline-end: 2rem;
+  }
+}
+
+.search_wrapper {
+  display: flex;
+  input {
+    padding-inline: 0.5rem;
+    padding-block: 0.2rem;
+  }
+
+  > button {
+    width: 40px;
+    height: 40px;
+    // background-color: rgba(128, 128, 128, 0.281);
+    border-radius: 50%;
+    padding: 0.4rem;
+    display: none;
+    cursor: pointer;
+
+    svg {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  > button:hover {
+    background-color: rgba(128, 128, 128, 0.281);
   }
 }
 
@@ -71,8 +150,7 @@
   will-change: clip-path, -webkit-clip-path;
   clip-path: circle(0% at 50% 0%);
   -webkit-clip-path: circle(0% at 50% 0%);
-  transition: clip-path 300ms ease-in,
-    -webkit-clip-path 300ms ease-in;
+  transition: clip-path 300ms ease-in, -webkit-clip-path 300ms ease-in;
 
   h6 {
     font-size: v.$font-size-medium;
@@ -90,5 +168,40 @@
 
   a:hover {
     color: #000;
+  }
+}
+
+@media (max-width: 1440px) {
+  .bottom_navbar_container {
+    li[data-classname="featured"] {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .bottom_navbar_container {
+    padding-block-end: 1rem;
+    [data-main-nav] {
+      display: none;
+    }
+
+    .btn_favorite {
+      display: none;
+    }
+
+    .btn_hamburger {
+      display: block;
+    }
+  }
+
+  .search_wrapper {
+    form {
+      display: none;
+    }
+
+    > button {
+      display: block;
+    }
   }
 }

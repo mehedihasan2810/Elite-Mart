@@ -3,6 +3,7 @@ import styles from "@/scss/pages-styles/Home/NewArrival.module.scss";
 import Image from "next/image";
 import { nanoid } from "@reduxjs/toolkit";
 import useNewArrival from "@/hooks/pages/Home/useNewArrival";
+import Link from "next/link";
 
 const arrivalImgData = [
   {
@@ -33,23 +34,30 @@ const arrivalImgData = [
 ];
 
 const NewArrival = () => {
-  const {handleSmallImgClick} = useNewArrival();
+  const { handleSmallImgClick } = useNewArrival();
 
   return (
     <section className={styles.new_arrival_container}>
-      <div className={styles.new_arrival_headers}>
-        <p>Vibe With Our</p>
-        <div className={styles.arrival_headers}>
-        <h2>New Arrivals</h2>
-        <h2 id="arrival-header-mask" className={styles.arrival_header_mask}>New Arrivals</h2>
+      <div className={styles.new_arrival_headers_wrapper}>
+        <div className={styles.new_arrival_headers}>
+          <p>Vibe With Our</p>
+          <div className={styles.arrival_headers}>
+            <h2>New Arrivals</h2>
+            <h2 id="arrival-header-mask" className={styles.arrival_header_mask}>
+              New Arrivals
+            </h2>
+          </div>
+          <button>
+            <Link href="/products">Shop Now</Link>{" "}
+          </button>
         </div>
-           <button>Shop Now</button>
       </div>
+
       <div data-arrival-small-img-wrapper>
         {arrivalImgData.map((item) => (
           <div key={item.id} data-arrival-img-parent={item.dataArrivalImg}>
             <Image
-              // key={item.id} 
+              // key={item.id}
               onClick={handleSmallImgClick}
               src={item.imgUrl}
               alt={item.dataArrivalImg}
@@ -62,7 +70,6 @@ const NewArrival = () => {
             />
           </div>
         ))}
-
       </div>
       <div data-arrival-img-wrapper className={styles.arrival_img_wrapper}>
         {arrivalImgData.map((item) => (

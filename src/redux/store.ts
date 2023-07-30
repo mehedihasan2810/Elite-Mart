@@ -1,11 +1,11 @@
 import { configureStore } from "@reduxjs/toolkit";
-import subMenuReducer from "@/redux/createSlices/subMenuSlice";
+import eliteMartReducer from "@/redux/createSlices/createSlice";
 import { dataApi } from "./createApi/createApi";
 
 export const store = configureStore({
   reducer: {
     [dataApi.reducerPath]: dataApi.reducer,
-    subMenu: subMenuReducer,
+    eliteMart: eliteMartReducer,
   },
 
   middleware: (getDefaultMiddleware) =>

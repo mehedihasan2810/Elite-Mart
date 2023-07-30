@@ -3,9 +3,12 @@
   margin-inline: auto;
   margin-block-start: 150px;
 
+  .category_headers_container {
+    display: flex;
+    justify-content: center;
+  }
+
   .category_headers {
-    width: max-content;
-    margin-inline: auto;
     margin-block-end: 30px;
     text-align: center;
   }
@@ -58,6 +61,7 @@
     justify-content: space-between;
     align-items: center;
     margin-block-end: 1rem;
+    margin-inline: 1rem;
   }
 
   .header_btns {
@@ -150,5 +154,32 @@
   img {
     object-fit: cover;
     display: block;
+  }
+}
+
+@media (max-width: 768px) {
+  .category_container {
+    .header_btns {
+      gap: 2rem;
+      margin-inline-start: 1rem;
+    }
+
+    [data-header-btn] {
+      font-size: 1.3rem;
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .category_container {
+    h2 {
+      font-size: 3rem;
+    }
+    .category_header_mask {
+      display: none;
+    }
+    .header_btns {
+      display: none;
+    }
   }
 }

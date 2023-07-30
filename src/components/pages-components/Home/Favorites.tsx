@@ -3,6 +3,7 @@ import styles from "@/scss/pages-styles/Home/Favorites.module.scss";
 import Image from "next/image";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { gsap } from "gsap";
+import Link from "next/link";
 gsap.registerPlugin(ScrollTrigger);
 const Favorites = () => {
   useLayoutEffect(() => {
@@ -22,6 +23,7 @@ const Favorites = () => {
 
   return (
     <div className={styles.favorites_container}>
+      <div className={styles.favorites_headers_container}>
       <div className={styles.favorites_headers}>
         <div className={styles.favorites_headers_wrapper}>
           <h2>Most Favorites</h2>
@@ -33,7 +35,8 @@ const Favorites = () => {
           </h2>
         </div>
         <p>from last month</p>
-        <button>Get Yours</button>
+        <button><Link href="/products">Get Yours</Link></button>
+      </div>
       </div>
 
       <div className={styles.favorites_wrapper}>
