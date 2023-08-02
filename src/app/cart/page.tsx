@@ -17,12 +17,16 @@ const Cart = () => {
     return cartProductIds;
   }
 
-  const { data, isLoading, isError, refetch } = useGetCartProductsQuery(
-    getCartProductIds(),
-    {
-      skip: !getCartProductIds(),
-    }
-  );
+  // const { data, isLoading, isError, refetch } = useGetCartProductsQuery(
+  //   getCartProductIds(),
+  //   {
+  //     skip: !getCartProductIds(),
+  //   }
+  // );
+
+  const data = {}
+  const isLoading = true;
+  const isError = true;
 
   function handleRemoveCartProduct(id: string) {
     const cartProductIds = getCartProductIds();
@@ -30,13 +34,13 @@ const Cart = () => {
       const arr = cartProductIds.filter((cartId) => cartId !== id);
       if (arr.length) {
         localStorage.setItem("cart", JSON.stringify(arr));
-        refetch();
+        // refetch();
         toast.success("Removed Succesfully", {
           autoClose: 2000,
         });
       } else {
         localStorage.clear();
-        refetch();
+        // refetch();
         toast.success("Removed Succesfully", {
           autoClose: 2000,
         });

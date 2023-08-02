@@ -38,9 +38,11 @@ async function getData() {
 
 const Products = async () => {
   // const session = await getServerSession(options);
-  const { success, data } = await getData();
+  // const { success, data } = await getData();
   // console.log(data);
   // console.log(success);
+  const success = false;
+  const data: any = [];
   return (
     <main className={styles.products_container}>
       <div className={styles.products_header}>

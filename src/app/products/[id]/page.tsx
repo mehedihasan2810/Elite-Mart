@@ -9,11 +9,13 @@ import { toast } from "react-toastify";
 import "react-loading-skeleton/dist/skeleton.css";
 
 const ProductDetails = ({ params }: { params: { id: string } }) => {
-  const {
-    data: productData,
-    isLoading,
-    isError,
-  } = useGetProductQuery(params.id);
+  // const {
+  //   data: productData,
+  //   isLoading,
+  //   isError,
+  // } = useGetProductQuery(params.id);
+
+  const productData: any = {data: {}}
 
   function addProductIdsToCookies() {
     const id: string = productData.data._id;
