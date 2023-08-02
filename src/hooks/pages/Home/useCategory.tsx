@@ -83,7 +83,6 @@ const useCategory = () => {
       const categorySlide = element as HTMLDivElement;
 
       if (isMobile) {
-        console.log("foo " + isMobile);
 
         categorySlide.style.width = `${categorySliderWrapper.offsetWidth}px`;
         categorySlide.style.height = `${categorySliderWrapper.offsetWidth}px`;

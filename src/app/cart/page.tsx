@@ -27,7 +27,6 @@ const Cart = () => {
   function handleRemoveCartProduct(id: string) {
     const cartProductIds = getCartProductIds();
     if (cartProductIds) {
-      console.log(id);
       const arr = cartProductIds.filter((cartId) => cartId !== id);
       if (arr.length) {
         localStorage.setItem("cart", JSON.stringify(arr));

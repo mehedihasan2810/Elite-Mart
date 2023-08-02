@@ -4,7 +4,6 @@ import { NextRequest, NextResponse } from "next/server";
 export async function GET(req: NextRequest) {
   const ids = req.nextUrl.searchParams.get("ids") as string;
   const productIds = ids.split(",");
-  console.log(productIds);
 
   try {
     await dbConnect();

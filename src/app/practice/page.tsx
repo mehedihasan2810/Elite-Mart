@@ -13,7 +13,6 @@ const Practice = async () => {
 
 
   const session = await getServerSession(options);
-  console.log(chalk.blue(session));
   return <h1>protected routeeeeee</h1>;
 };
 
