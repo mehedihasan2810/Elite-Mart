@@ -2,7 +2,7 @@ import { ProductType } from "@/app/products/page";
 import styles from "@/scss/pages-styles/products/Product.module.scss";
 import Image from "next/image";
 import Link from "next/link";
-const Product = (product: ProductType) => {
+const Product = ({ product }: { product: ProductType }) => {
   const { _id, name, image_url, price, categories_1, product_status } = product;
   return (
     <figure className={styles.product_container}>

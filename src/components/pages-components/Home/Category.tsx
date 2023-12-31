@@ -175,7 +175,7 @@ const Category = () => {
           </div>
 
           <div className={styles.slide_btns}>
-            <button data-slide-btn="prev">
+            <button data-slide-btn="prev" aria-label="Previous">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -191,7 +191,7 @@ const Category = () => {
                 />
               </svg>
             </button>
-            <button data-slide-btn="next">
+            <button data-slide-btn="next" aria-label="Next">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"

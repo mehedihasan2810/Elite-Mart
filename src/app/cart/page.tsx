@@ -9,24 +9,26 @@ import { toast } from "react-toastify";
 import Skeleton from "react-loading-skeleton";
 import "react-loading-skeleton/dist/skeleton.css";
 
+
 const Cart = () => {
   function getCartProductIds() {
-    const cartProductIds: string[] | null =
-      localStorage.getItem("cart") &&
-      JSON.parse(localStorage.getItem("cart") as string);
-    return cartProductIds;
+    if (typeof window !== "undefined") {
+      const cartProductIds: string[] | null =
+        localStorage.getItem("cart") &&
+        JSON.parse(localStorage.getItem("cart") as string);
+      return cartProductIds;
+    } else {
+      return null;
+    }
   }
 
-  // const { data, isLoading, isError, refetch } = useGetCartProductsQuery(
-  //   getCartProductIds(),
-  //   {
-  //     skip: !getCartProductIds(),
-  //   }
-  // );
+  const { data, isLoading, isError, refetch } = useGetCartProductsQuery(
+    getCartProductIds(),
+    {
+      skip: !getCartProductIds(),
+    }
+  );
 
-  const data = {}
-  const isLoading = true;
-  const isError = true;
 
   function handleRemoveCartProduct(id: string) {
     const cartProductIds = getCartProductIds();
@@ -34,13 +36,13 @@ const Cart = () => {
       const arr = cartProductIds.filter((cartId) => cartId !== id);
       if (arr.length) {
         localStorage.setItem("cart", JSON.stringify(arr));
-        // refetch();
+        refetch();
         toast.success("Removed Succesfully", {
           autoClose: 2000,
         });
       } else {
         localStorage.clear();
-        // refetch();
+        refetch();
         toast.success("Removed Succesfully", {
           autoClose: 2000,
         });
@@ -61,12 +63,16 @@ const Cart = () => {
           <div className={styles.cart_item_count}>
             {getCartProductIds()
               ? `You have added ${
-                  isLoading ? "0" : data?.cartProducts?.length
-                } product in the cart`
+                  isLoading
+                    ? "0"
+                    : data?.cartProducts?.length
+                    ? data?.cartProducts?.length
+                    : "0"
+                } product in the cart!`
               : `You have added 0 product in the cart!`}
           </div>
-          {isLoading
-            ? Array.from({ length: 3 }).map((_, index) => (
+          {isLoading || typeof window === 'undefined'
+            ? Array.from({ length: 1 }).map((_, index) => (
                 <div key={index} className={styles.cart_item}>
                   <div className={styles.left_wrapper}>
                     <div className={styles.img_wrapper}>
@@ -130,7 +136,7 @@ const Cart = () => {
                 </div>
               ))
             : getCartProductIds() &&
-              data.success &&
+              data?.success &&
               data.cartProducts.map((product: ProductType) => (
                 <div key={product._id} className={styles.cart_item}>
                   <div className={styles.left_wrapper}>

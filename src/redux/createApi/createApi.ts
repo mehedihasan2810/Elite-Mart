@@ -2,7 +2,10 @@ import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 export const dataApi = createApi({
   reducerPath: "dataApi",
   baseQuery: fetchBaseQuery({
-    baseUrl: "http://localhost:3000",
+    baseUrl:
+      process.env.NODE_ENV === "development"
+        ? "http://localhost:3000"
+        : "https://elite-mart.vercel.app",
   }),
 
   endpoints: (builder) => ({
@@ -11,8 +14,8 @@ export const dataApi = createApi({
     }),
 
     getCartProducts: builder.query({
-      query: (ids: string[] | null) => `/api/cart?ids=${ids?.join(',')}`
-    })
+      query: (ids: string[] | null) => `/api/cart?ids=${ids?.join(",")}`,
+    }),
   }),
 });
 

@@ -3,16 +3,16 @@ import getDomElements from "@/utilities/getDomElements";
 import React from "react";
 
 // TODO set these urls to hero product link href
-const mapHeroProductUrls = new Map([
-  ["kid-shoes", "#"],
-  ["kid-clothes", "#"],
-  ["women-clothes", "#"],
-  ["women-shoes", "#"],
-  ["men-shoes", "#"],
-  ["men-clothes", "#"],
-  ["featured-clothes", "#"],
-  ["featured-shoes", "#"],
-]);
+// const mapHeroProductUrls = new Map([
+//   ["kid-shoes", "#"],
+//   ["kid-clothes", "#"],
+//   ["women-clothes", "#"],
+//   ["women-shoes", "#"],
+//   ["men-shoes", "#"],
+//   ["men-clothes", "#"],
+//   ["featured-clothes", "#"],
+//   ["featured-shoes", "#"],
+// ]);
 
 const mapHeroClipImgPosition = new Map();
 

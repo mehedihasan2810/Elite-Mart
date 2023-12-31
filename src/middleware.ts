@@ -1,9 +1,9 @@
-import { getServerSession } from "next-auth";
-import { NextResponse, NextRequest } from "next/server";
-import { options } from "./app/api/auth/[...nextauth]/options";
-import chalk from "chalk";
-import { getToken } from "next-auth/jwt";
-import { getSession } from "next-auth/react";
+// import { getServerSession } from "next-auth";
+// import { NextResponse, NextRequest } from "next/server";
+// import { options } from "./app/api/auth/[...nextauth]/options";
+// import chalk from "chalk";
+// import { getToken } from "next-auth/jwt";
+// import { getSession } from "next-auth/react";
 // without a defined matcher this one liner applies
 // next auth to entire project
 export { default } from "next-auth/middleware";
@@ -31,7 +31,7 @@ export { default } from "next-auth/middleware";
 // }
 
 export const config = {
-  matcher: "/",
+  matcher: "/payment",
 };
 
 // export const config = {

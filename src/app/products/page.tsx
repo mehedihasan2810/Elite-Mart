@@ -1,13 +1,11 @@
 import Product from "@/components/pages-components/products/Product";
 import styles from "@/scss/pages-styles/products/Products.module.scss";
-// import { getServerSession } from "next-auth";
-import React from "react";
-// import { options } from "../api/auth/[...nextauth]/options";
-import getToken from "@/utilities/getToken";
+import ProductsCollection from "@/models/products";
+import dbConnect from "@/lib/dbConnect";
 
 export type ProductType = {
   categories: [];
-  _id: string;
+  _id: any;
   name: string;
   model_number: string;
   release_date: string;
@@ -25,30 +23,44 @@ export type ProductType = {
   updated_at: string;
 };
 
-async function getData() {
-  const res = await fetch("http://localhost:3000/api/products", {
-    headers: {
-      authorization: getToken(),
-    },
-    cache: "no-store",
-  });
+export const metadata = {
+  title: "Elite Mart | Products",
+  description: "All Your Needs In One Place",
+};
 
-  return res.json();
+async function getData() {
+  try {
+    await dbConnect();
+    const products = await ProductsCollection.find({});
+    return { success: true, products };
+  } catch (error) {
+    return { success: false, message: (error as Error).message };
+  }
 }
 
 const Products = async () => {
-  // const session = await getServerSession(options);
-  // const { success, data } = await getData();
-  // console.log(data);
-  // console.log(success);
-  const success = false;
-  const data: any = [];
+  const data = await getData();
+
+  if (!data.success && !data.products) {
+    return (
+      <main>
+        <p>Something Went Wrong! {data.message}</p>
+      </main>
+    );
+  }
+
+  const { success, products } = data;
+
   return (
     <main className={styles.products_container}>
       <div className={styles.products_header}>
         <div className={styles.products_title}>
           <h1>Clothing</h1>
-          <div>(4201)</div>
+          <div>
+            {success && products
+              ? products.concat(products, products).length
+              : "0"}
+          </div>
         </div>
 
         <div className={styles.filter_sort_wrapper}>
@@ -58,12 +70,10 @@ const Products = async () => {
       </div>
 
       <div className={styles.products_grid_container}>
-        {success ? (
-          data
-            .concat(data, data)
-            .map((product: ProductType) => (
-              <Product key={product._id} {...product} />
-            ))
+        {success && products ? (
+          products.concat(products, products).map((product) => {
+            return <Product key={product._id} product={product} />;
+          })
         ) : (
           <h1>Something Went Wrong!</h1>
         )}
