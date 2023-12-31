@@ -7,7 +7,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "test": "jest --verbose",
+    "test": "jest --verbose & npm run lint",
+    "test:watch": "jest --watch --verbose",
     "test:ci": "jest --ci",
     "prepare": "husky install"
   },
