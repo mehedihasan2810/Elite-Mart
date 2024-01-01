@@ -1,5 +1,5 @@
 .cart_container {
-  width: fit-content;
+  // width: fit-content;
   margin-block-start: 100px;
   width: min(900px, 97vw);
   margin-inline: auto;
@@ -134,5 +134,21 @@
 
   .checkout_btn:hover {
     opacity: 0.8;
+  }
+}
+
+@media (max-width: 767px) {
+  .cart_container {
+    grid-template-columns: 1fr;
+    width: 100%;
+    padding-inline: 0.8rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .cart_container {
+    .info_right {
+      align-self: flex-end;
+    }
   }
 }

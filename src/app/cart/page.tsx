@@ -9,7 +9,6 @@ import { toast } from "react-toastify";
 import Skeleton from "react-loading-skeleton";
 import "react-loading-skeleton/dist/skeleton.css";
 
-
 const Cart = () => {
   function getCartProductIds() {
     if (typeof window !== "undefined") {
@@ -28,7 +27,6 @@ const Cart = () => {
       skip: !getCartProductIds(),
     }
   );
-
 
   function handleRemoveCartProduct(id: string) {
     const cartProductIds = getCartProductIds();
@@ -71,7 +69,7 @@ const Cart = () => {
                 } product in the cart!`
               : `You have added 0 product in the cart!`}
           </div>
-          {isLoading || typeof window === 'undefined'
+          {isLoading || typeof window === "undefined"
             ? Array.from({ length: 1 }).map((_, index) => (
                 <div key={index} className={styles.cart_item}>
                   <div className={styles.left_wrapper}>
