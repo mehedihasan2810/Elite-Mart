@@ -5,12 +5,13 @@ import Navbar from "@/components/shared-components/Navbar/Navbar";
 import Footer from "@/components/shared-components/Footer";
 import Providers from "@/providers/providers";
 import Sidebar from "@/components/shared-components/Sidebar/Sidebar";
+import type { Metadata } from "next";
 
 const work_Sans = Work_Sans({
   subsets: ["latin"],
 });
 
-export const metadata = {
+export const metadata: Metadata = {
   title: "Elite Mart",
   description: "All Your Needs In One Place",
 };

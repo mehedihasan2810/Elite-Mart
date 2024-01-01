@@ -65,7 +65,7 @@ const Products = async () => {
 
         <div className={styles.filter_sort_wrapper}>
           <div className={styles.filter_select}>
-            <select>
+            <select aria-label="Filter by category">
               <option value="all">Filter</option>
               <option value="clothes">Clothes</option>
               <option value="shoes">Shoes</option>
@@ -73,7 +73,7 @@ const Products = async () => {
           </div>
 
           <div className={styles.sort_by_price}>
-            <select>
+            <select aria-label="Sort by price">
               <option value="default">Sort by price</option>
               <option value="low-to-high">Low to high</option>
               <option value="high-to-low">High to low</option>

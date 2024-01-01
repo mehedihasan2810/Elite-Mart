@@ -155,7 +155,7 @@ const Cart = () => {
                       <div>White</div>
 
                       <div className={styles.btns_wrapper}>
-                        <button disabled>
+                        <button disabled aria-label="Add to favorite">
                           <svg
                             xmlns="http://www.w3.org/2000/svg"
                             fill="none"
@@ -163,6 +163,7 @@ const Cart = () => {
                             strokeWidth={1.5}
                             stroke="currentColor"
                             className="w-6 h-6"
+                            aria-hidden
                           >
                             <path
                               strokeLinecap="round"
@@ -173,6 +174,7 @@ const Cart = () => {
                         </button>
                         <button
                           onClick={() => handleRemoveCartProduct(product._id)}
+                          aria-label="Delete the cart item"
                         >
                           <svg
                             xmlns="http://www.w3.org/2000/svg"
@@ -181,6 +183,7 @@ const Cart = () => {
                             strokeWidth={1.5}
                             stroke="currentColor"
                             className="w-6 h-6"
+                            aria-hidden
                           >
                             <path
                               strokeLinecap="round"

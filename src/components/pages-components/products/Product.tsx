@@ -63,10 +63,7 @@ const Product = ({
 
   return (
     <figure aria-labelledby="title12" className={styles.product_container}>
-      <Link
-        aria-label="Visit the product details page"
-        href={`/products/${_id}`}
-      >
+      <Link href={`/products/${_id}`}>
         <div className={styles.product_img_wrapper}>
           <Image
             src={image_url}
