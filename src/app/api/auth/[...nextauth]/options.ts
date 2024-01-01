@@ -56,6 +56,6 @@ export const options: NextAuthOptions = {
 
   theme: {
     colorScheme: "light",
-    logo: "https://i.ibb.co/J3KByKq/men-clothes-2.jpg",
+    logo: "/images/profile.png",
   },
 };

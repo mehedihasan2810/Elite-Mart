@@ -270,6 +270,7 @@ const Category = () => {
                     alt={data.url}
                     quality={100}
                     fill
+                    sizes="(max-width: 767px) 100vw, (max-width: 1023px) 50vw, (max-width: 1500px) 33vw, 25vw"
                     placeholder="blur"
                     blurDataURL={data.blurHash}
                   />
@@ -293,6 +294,7 @@ const Category = () => {
                     alt={data.url}
                     quality={100}
                     fill
+                    sizes="(max-width: 767px) 100vw, (max-width: 1023px) 50vw, (max-width: 1500px) 33vw, 25vw"
                     placeholder="blur"
                     blurDataURL={data.blurHash}
                   />
@@ -318,6 +320,7 @@ const Category = () => {
                     alt={data.url}
                     quality={100}
                     fill
+                    sizes="(max-width: 767px) 100vw, (max-width: 1023px) 50vw, (max-width: 1500px) 33vw, 25vw"
                     placeholder="blur"
                     blurDataURL={data.blurHash}
                   />

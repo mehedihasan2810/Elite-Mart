@@ -121,39 +121,43 @@ const Hero = () => {
       {/*  */}
 
       <section className={styles.hero_container}>
-        <div
-          onPointerOver={handleHeroGridPointerOver}
-          onPointerLeave={handleHeroGridPointerLeave}
-          data-hero-grid-element
-          className={styles.hero_grid}
-        >
-          {heroProductData.map((data) => (
-            <div
-              key={data.id}
-              data-hero-grid-child
-              data-hero-product-title={data.datasetValue}
-            >
-              <Image
-                src={data.img1}
-                alt={data.datasetValue}
-                priority
-                quality={100}
-                fill
-                placeholder="blur"
-                blurDataURL={data.img1BlurHash}
-              />
-              <Image
-                src={data.img2}
-                alt={data.datasetValue}
-                priority
-                quality={100}
-                fill
-                placeholder="blur"
-                blurDataURL={data.img2BlurHash}
-              />
-            </div>
-          ))}
-        </div>
+        <Link href="/products">
+          <div
+            onPointerOver={handleHeroGridPointerOver}
+            onPointerLeave={handleHeroGridPointerLeave}
+            data-hero-grid-element
+            className={styles.hero_grid}
+          >
+            {heroProductData.map((data) => (
+              <div
+                key={data.id}
+                data-hero-grid-child
+                data-hero-product-title={data.datasetValue}
+              >
+                <Image
+                  src={data.img1}
+                  alt={data.datasetValue}
+                  priority
+                  quality={100}
+                  fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, (max-width: 1440px) 33vw, 25vw"
+                  placeholder="blur"
+                  blurDataURL={data.img1BlurHash}
+                />
+                <Image
+                  src={data.img2}
+                  alt={data.datasetValue}
+                  priority
+                  quality={100}
+                  fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, (max-width: 1440px) 33vw, 25vw"
+                  placeholder="blur"
+                  blurDataURL={data.img2BlurHash}
+                />
+              </div>
+            ))}
+          </div>
+        </Link>
       </section>
     </>
   );

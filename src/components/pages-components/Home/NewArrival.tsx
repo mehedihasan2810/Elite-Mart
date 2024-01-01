@@ -65,7 +65,6 @@ const NewArrival = () => {
         {arrivalImgData.map((item) => (
           <div key={item.id} data-arrival-img-parent={item.dataArrivalImg}>
             <Image
-              // key={item.id}
               onClick={handleSmallImgClick}
               src={item.imgUrl}
               alt={item.dataArrivalImg}
@@ -73,6 +72,7 @@ const NewArrival = () => {
               priority
               quality={100}
               fill
+              sizes="80px"
               placeholder="blur"
               blurDataURL={item.blurHash}
             />
@@ -89,6 +89,7 @@ const NewArrival = () => {
             priority
             quality={100}
             fill
+            sizes="100vw"
             placeholder="blur"
             blurDataURL={item.blurHash}
           />

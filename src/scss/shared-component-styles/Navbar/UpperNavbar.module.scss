@@ -28,3 +28,11 @@
     height: 20px;
   }
 }
+
+@media (max-width: 576px) {
+  .upperNavbar_container {
+    ul li:last-child{
+      display: none;
+    }
+  }
+}

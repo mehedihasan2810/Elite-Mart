@@ -42,73 +42,92 @@
     }
   }
 
-  .product_details_category{
+  .product_details_category {
     font-size: 1.2rem;
     font-weight: 500;
   }
 
-  .product_details_price{
-     font-weight: 600;
+  .product_details_price {
+    font-weight: 600;
   }
 
-
-  .sizes_container{
+  .sizes_container {
     // border: 1px solid;
 
     margin-block-start: 2rem;
 
-    h2{
+    h2 {
       font-weight: 600;
     }
   }
 
-
-  .sizes_grid{
+  .sizes_grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 0.5rem;
 
-    > div{
-      font-size: 1.1rem;
+    > div {
+      font-size: 1rem;
       font-weight: 500;
-      padding: 0.6rem 1.2rem;
+      padding: 0.4rem 1rem;
       border: 1px solid #0000002a;
       border-radius: 4px;
       cursor: pointer;
     }
 
-    >div:hover{
+    > div:hover {
       border: 1px solid #000;
     }
   }
 
-
-  .btns{
+  .btns {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
     margin-block-start: 2rem;
 
-    > button:first-child{
+    > button:first-child {
       background-color: #000;
       color: #fff;
     }
-    > button:first-child:hover{
-     opacity: 0.8;
+    > button:first-child:hover {
+      opacity: 0.8;
     }
 
-    > button{
-      font-size: 1.2rem;
-      font-weight: 600;
+    > button {
+      font-size: 1.1rem;
+      font-weight: 500;
       background-color: transparent;
       border: 1px solid #0000002a;
-      padding: 1rem;
+      padding: 0.8rem;
       border-radius: 8px;
       cursor: pointer;
     }
 
-    > button:not(:first-child):hover{
-        border: 1px solid #000;
+    > button:not(:first-child):hover {
+      border: 1px solid #000;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .product_details_container {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 576px) {
+  .product_details_container {
+    inline-size: 100%;
+    .product_details_left_wrapper {
+      margin-inline: 0.8rem;
+    }
+    .product_details_right_wrapper {
+      margin-inline: 0.8rem;
+    }
+    .display_img_wrapper {
+      width: 100%;
+      height: 500px;
     }
   }
 }

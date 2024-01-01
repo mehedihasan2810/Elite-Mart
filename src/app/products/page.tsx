@@ -24,7 +24,7 @@ export type ProductType = {
 };
 
 export const metadata = {
-  title: "Elite Mart | Products",
+  title: "Products - Elite Mart",
   description: "All Your Needs In One Place",
 };
 
@@ -64,15 +64,28 @@ const Products = async () => {
         </div>
 
         <div className={styles.filter_sort_wrapper}>
-          <div>Filter</div>
-          <div>Sort</div>
+          <div className={styles.filter_select}>
+            <select>
+              <option value="all">Filter</option>
+              <option value="clothes">Clothes</option>
+              <option value="shoes">Shoes</option>
+            </select>
+          </div>
+
+          <div className={styles.sort_by_price}>
+            <select>
+              <option value="default">Sort by price</option>
+              <option value="low-to-high">Low to high</option>
+              <option value="high-to-low">High to low</option>
+            </select>
+          </div>
         </div>
       </div>
 
       <div className={styles.products_grid_container}>
         {success && products ? (
-          products.concat(products, products).map((product) => {
-            return <Product key={product._id} product={product} />;
+          products.concat(products, products).map((product, i) => {
+            return <Product key={product._id} product={product} index={i} />;
           })
         ) : (
           <h1>Something Went Wrong!</h1>
