@@ -14,7 +14,7 @@ const Hero = () => {
       {/* ------------ Moving Elements ------------ */}
       <aside className={styles.hero_moving_elements} data-hero-moving-elements>
         {/* Cursor Movement */}
-        <div className={styles.moving_cursor} data-moving-element>
+        <div className={styles.moving_cursor} data-moving-element data-testid="moving-cursor">
           <Link href="#" data-moving-cursor-link>
             Shop
           </Link>
@@ -42,6 +42,7 @@ const Hero = () => {
             onPointerLeave={handleHeroGridPointerLeave}
             data-hero-grid-element
             className={styles.hero_grid}
+            data-testid="hero-grid"
           >
             {heroProductData.map((data) => (
               <div

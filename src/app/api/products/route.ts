@@ -1,22 +1,19 @@
 import { NextResponse } from "next/server";
 import ProductsCollection from "@/models/products";
 import dbConnect from "@/lib/dbConnect";
-// import isAuthenticated from "@/utilities/isAuthenticated";
 
 export async function GET() {
   try {
-    // if (isAuthenticated()) {
-      await dbConnect();
-      const products = await ProductsCollection.find();
-      return NextResponse.json({ success: true, data: products });
-      // return NextResponse.json({ success: true, data: 'foooooooooooooooo' });
-    // } else {
-    //   return NextResponse.json(
-    //     { success: false, message: "authentication failed" },
-    //     { status: 401, headers: { "content-type": "application/json" } }
-    //   );
-    // }
+    // Connect to the database using the dbConnect utility
+    await dbConnect();
+
+    // Retrieve all products from the ProductsCollection
+    const products = await ProductsCollection.find();
+
+    // Return a JSON response with success and data fields
+    return NextResponse.json({ success: true, data: products });
   } catch (error) {
+    // Return a JSON response with failure, error, and status fields
     return NextResponse.json({ success: false, error: error }, { status: 400 });
   }
 }

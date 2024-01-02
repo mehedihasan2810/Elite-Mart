@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect } from "react";
+import React from "react";
 import styles from "@/scss/shared-component-styles/Navbar/BottomNavbar.module.scss";
 import { submenuData } from "./submenu-data";
 
@@ -8,10 +8,12 @@ import Search from "./Search";
 import Link from "next/link";
 import { useDispatch } from "react-redux";
 import { visibleSidebar } from "@/redux/createSlices/createSlice";
+import { useIsomorphicLayoutEffect } from "@/hooks/global/useIsomorphicLayoutEffect";
 
 const BottomNavbar = () => {
   const dispatch = useDispatch();
 
+  // Function to handle closing submenu on pointer leave
   const handleCloseSubmenu = (event: React.PointerEvent<HTMLButtonElement>) => {
     // close the submenu and hover style on pointer leave from target nav
     const targetElement = event.currentTarget as HTMLButtonElement;
@@ -35,7 +37,9 @@ const BottomNavbar = () => {
     //
   };
 
+  // Function to handle showing submenu on pointer enter
   const handleShowSubmenu = (e: React.PointerEvent<HTMLButtonElement>) => {
+    // Show the target submenu, apply hover styles to the target nav, and remove hover styles from others
     const targetElement = e.currentTarget as HTMLButtonElement;
     const svgElement = targetElement.querySelector("svg") as SVGSVGElement;
     const submenu_elements = document.querySelectorAll("[data-submenu]");
@@ -104,7 +108,8 @@ const BottomNavbar = () => {
     );
   };
 
-  useEffect(() => {
+  // Effect hook to set submenu coordinates on scroll
+  useIsomorphicLayoutEffect(() => {
     const nav_link_elements = document.querySelectorAll("[data-nav-link]");
     const submenu_elements = document.querySelectorAll("[data-submenu]");
 
@@ -128,6 +133,7 @@ const BottomNavbar = () => {
 
     setSubmenuCoords();
 
+    // Event listener for scroll to update submenu coordinates
     window.addEventListener("scroll", setSubmenuCoords);
 
     return () => removeEventListener("scroll", setSubmenuCoords);
@@ -135,18 +141,24 @@ const BottomNavbar = () => {
 
   return (
     <>
+      {/* Main navigation container */}
       <nav className={styles.bottom_navbar_container}>
+        {/* Left section with logo and main navigation links */}
         <div>
+          {/* Logo */}
           <div className={styles.navbar_logo}>
             <Link href="/">Elite Mart</Link>
           </div>
 
+          {/* Main navigation links */}
           <ul role="list" data-main-nav>
+            {/* Map submenuData to create navigation buttons */}
             {submenuData.map((item) => {
               const { pageId, page } = item;
 
               return (
                 <li key={pageId} data-classname={item.page.toLowerCase()}>
+                  {/* Navigation button */}
                   <button
                     data-nav-link={item.page.toLowerCase()}
                     onPointerEnter={handleShowSubmenu}
@@ -175,9 +187,11 @@ const BottomNavbar = () => {
           </ul>
         </div>
 
+        {/* Right section with search, cart, favorite buttons, and hamburger menu */}
         <div>
           <div className={styles.search_wrapper}>
             <Search />
+            {/* Search button */}
             <button aria-label="Search products">
               <svg
                 aria-hidden={true}
@@ -197,7 +211,7 @@ const BottomNavbar = () => {
             </button>
           </div>
 
-          {/* <button aria-label="View cart" className={styles.btn_cart}> */}
+          {/* Cart button */}
           <Link className={styles.btn_cart} href="/cart" aria-label="View cart">
             <svg
               aria-hidden={true}
@@ -215,8 +229,8 @@ const BottomNavbar = () => {
               />
             </svg>
           </Link>
-          {/* </button> */}
 
+          {/* Favorite button */}
           <button aria-label="View favorite" className={styles.btn_favorite}>
             <svg
               aria-hidden={true}
@@ -236,7 +250,8 @@ const BottomNavbar = () => {
           </button>
         </div>
 
-        <button 
+        {/* Hamburger menu button */}
+        <button
           onClick={() => {
             dispatch(visibleSidebar());
           }}
@@ -261,7 +276,7 @@ const BottomNavbar = () => {
         </button>
       </nav>
 
-      {/* mapping submenu component */}
+      {/* Map submenuData to create SubMenu components */}
       {submenuData.map((item) => (
         <SubMenu
           key={item.pageId}

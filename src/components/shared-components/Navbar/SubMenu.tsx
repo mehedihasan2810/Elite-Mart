@@ -18,6 +18,7 @@ const SubMenu = ({
   data,
 }: SubMenuPropsType) => {
   return (
+    // Submenu container with event handlers and dataset
     <aside
       className={className}
       data-submenu={datasetSubmenu}
