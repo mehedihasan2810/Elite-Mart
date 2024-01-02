@@ -1,0 +1,179 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<UpperNavbar/> should UpperNavbar component render properly and USD text and flag img should be in the document 1`] = `
+<DocumentFragment>
+  <div
+    class="upperNavbar_container"
+  >
+    <div>
+      <div>
+        <img
+          alt="us flag"
+          data-nimg="1"
+          data-testid="flag"
+          decoding="async"
+          height="25"
+          loading="lazy"
+          src="us.svg"
+          style="color: transparent;"
+          width="25"
+        />
+        <svg
+          class="w-6 h-6"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.5"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M8.25 4.5l7.5 7.5-7.5 7.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+      </div>
+      <div>
+        <span>
+          USD
+        </span>
+        <svg
+          class="w-6 h-6"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.5"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M8.25 4.5l7.5 7.5-7.5 7.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+      </div>
+    </div>
+    <ul
+      role="list"
+    >
+      <li>
+        <a
+          href="/api/auth/signin"
+        >
+          Sign In
+        </a>
+      </li>
+      <li>
+        <a
+          href="/api/auth/signout"
+        >
+          Sign Out
+        </a>
+      </li>
+      <li>
+        <a
+          href="#"
+        >
+          Our Stores
+        </a>
+      </li>
+      <li>
+        <a
+          href="#"
+        >
+          Help
+        </a>
+      </li>
+    </ul>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`<UpperNavbar/> there should be 4 Link 1`] = `
+<DocumentFragment>
+  <div
+    class="upperNavbar_container"
+  >
+    <div>
+      <div>
+        <img
+          alt="us flag"
+          data-nimg="1"
+          data-testid="flag"
+          decoding="async"
+          height="25"
+          loading="lazy"
+          src="us.svg"
+          style="color: transparent;"
+          width="25"
+        />
+        <svg
+          class="w-6 h-6"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.5"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M8.25 4.5l7.5 7.5-7.5 7.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+      </div>
+      <div>
+        <span>
+          USD
+        </span>
+        <svg
+          class="w-6 h-6"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.5"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M8.25 4.5l7.5 7.5-7.5 7.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+      </div>
+    </div>
+    <ul
+      role="list"
+    >
+      <li>
+        <a
+          href="/api/auth/signin"
+        >
+          Sign In
+        </a>
+      </li>
+      <li>
+        <a
+          href="/api/auth/signout"
+        >
+          Sign Out
+        </a>
+      </li>
+      <li>
+        <a
+          href="#"
+        >
+          Our Stores
+        </a>
+      </li>
+      <li>
+        <a
+          href="#"
+        >
+          Help
+        </a>
+      </li>
+    </ul>
+  </div>
+</DocumentFragment>
+`;

@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Search/> should Search component render Properly with a search field and placeholder text should be Search 1`] = `
+<DocumentFragment>
+  <form
+    class="search_form"
+    data-search-input="true"
+  >
+    <input
+      placeholder="Search products..."
+      type="search"
+    />
+  </form>
+</DocumentFragment>
+`;

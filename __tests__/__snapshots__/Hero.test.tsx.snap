@@ -1,0 +1,285 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Hero /> Should render properly & match snapshot 1`] = `
+<DocumentFragment>
+  <aside
+    class="hero_moving_elements"
+    data-hero-moving-elements="true"
+  >
+    <div
+      class="moving_cursor"
+      data-moving-element="true"
+      data-testid="moving-cursor"
+    >
+      <a
+        data-moving-cursor-link="true"
+        href="#"
+      >
+        Shop
+      </a>
+    </div>
+    <div
+      data-hero-product-title="kid-shoes"
+      data-hero-title="true"
+    >
+      Kids Buddy
+    </div>
+    <div
+      data-hero-product-title="kid-clothes"
+      data-hero-title="true"
+    >
+      Kids Happiness
+    </div>
+    <div
+      data-hero-product-title="women-clothes"
+      data-hero-title="true"
+    >
+      Women Power
+    </div>
+    <div
+      data-hero-product-title="women-shoes"
+      data-hero-title="true"
+    >
+      Women Freedom
+    </div>
+    <div
+      data-hero-product-title="men-shoes"
+      data-hero-title="true"
+    >
+      Men Strength
+    </div>
+    <div
+      data-hero-product-title="men-clothes"
+      data-hero-title="true"
+    >
+      Men Inspiration
+    </div>
+    <div
+      data-hero-product-title="featured-clothes"
+      data-hero-title="true"
+    >
+      Your Favorite
+    </div>
+    <div
+      data-hero-product-title="featured-shoes"
+      data-hero-title="true"
+    >
+      Your Joy
+    </div>
+  </aside>
+  <section
+    class="hero_container"
+  >
+    <a
+      href="/products"
+    >
+      <div
+        class="hero_grid"
+        data-hero-grid-element="true"
+        data-testid="hero-grid"
+      >
+        <div
+          data-hero-grid-child="true"
+          data-hero-product-title="kid-shoes"
+        >
+          <img
+            alt="kid-shoes"
+            data-nimg="fill"
+            decoding="async"
+            loading="lazy"
+            sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, (max-width: 1440px) 33vw, 25vw"
+            src="/_next/image?url=https%3A%2F%2Fi.ibb.co%2FC9RCHN1%2Fkids-shoes2.jpg&w=3840&q=100"
+            srcset="/_next/image?url=https%3A%2F%2Fi.ibb.co%2FC9RCHN1%2Fkids-shoes2.jpg&w=256&q=100 256w, /_next/image?url=https%3A%2F%2Fi.ibb.co%2FC9RCHN1%2Fkids-shoes2.jpg&w=384&q=100 384w, /_next/image?url=https%3A%2F%2Fi.ibb.co%2FC9RCHN1%2Fkids-shoes2.jpg&w=640&q=100 640w, /_next/image?url=https%3A%2F%2Fi.ibb.co%2FC9RCHN1%2Fkids-shoes2.jpg&w=750&q=100 750w, /_next/image?url=https%3A%2F%2Fi.ibb.co%2FC9RCHN1%2Fkids-shoes2.jpg&w=828&q=100 828w, /_next/image?url=https%3A%2F%2Fi.ibb.co%2FC9RCHN1%2Fkids-shoes2.jpg&w=1080&q=100 1080w, /_next/image?url=https%3A%2F%2Fi.ibb.co%2FC9RCHN1%2Fkids-shoes2.jpg&w=1200&q=100 1200w, /_next/image?url=https%3A%2F%2Fi.ibb.co%2FC9RCHN1%2Fkids-shoes2.jpg&w=1920&q=100 1920w, /_next/image?url=https%3A%2F%2Fi.ibb.co%2FC9RCHN1%2Fkids-shoes2.jpg&w=2048&q=100 2048w, /_next/image?url=https%3A%2F%2Fi.ibb.co%2FC9RCHN1%2Fkids-shoes2.jpg&w=3840&q=100 3840w"
+            style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent; background-size: cover; background-position: 50% 50%; background-repeat: no-repeat;"
+          />
+          <img
+            alt="kid-shoes"
+            data-nimg="fill"
+            decoding="async"
+            loading="lazy"
+            sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, (max-width: 1440px) 33vw, 25vw"
+            src="/_next/image?url=https%3A%2F%2Fi.ibb.co%2FKbj76cj%2Fkids-shoes3.jpg&w=3840&q=100"
+            srcset="/_next/image?url=https%3A%2F%2Fi.ibb.co%2FKbj76cj%2Fkids-shoes3.jpg&w=256&q=100 256w, /_next/image?url=https%3A%2F%2Fi.ibb.co%2FKbj76cj%2Fkids-shoes3.jpg&w=384&q=100 384w, /_next/image?url=https%3A%2F%2Fi.ibb.co%2FKbj76cj%2Fkids-shoes3.jpg&w=640&q=100 640w, /_next/image?url=https%3A%2F%2Fi.ibb.co%2FKbj76cj%2Fkids-shoes3.jpg&w=750&q=100 750w, /_next/image?url=https%3A%2F%2Fi.ibb.co%2FKbj76cj%2Fkids-shoes3.jpg&w=828&q=100 828w, /_next/image?url=https%3A%2F%2Fi.ibb.co%2FKbj76cj%2Fkids-shoes3.jpg&w=1080&q=100 1080w, /_next/image?url=https%3A%2F%2Fi.ibb.co%2FKbj76cj%2Fkids-shoes3.jpg&w=1200&q=100 1200w, /_next/image?url=https%3A%2F%2Fi.ibb.co%2FKbj76cj%2Fkids-shoes3.jpg&w=1920&q=100 1920w, /_next/image?url=https%3A%2F%2Fi.ibb.co%2FKbj76cj%2Fkids-shoes3.jpg&w=2048&q=100 2048w, /_next/image?url=https%3A%2F%2Fi.ibb.co%2FKbj76cj%2Fkids-shoes3.jpg&w=3840&q=100 3840w"
+            style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent; background-size: cover; background-position: 50% 50%; background-repeat: no-repeat;"
+          />
+        </div>
+        <div
+          data-hero-grid-child="true"
+          data-hero-product-title="kid-clothes"
+        >
+          <img
+            alt="kid-clothes"
+            data-nimg="fill"
+            decoding="async"
+            loading="lazy"
+            sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, (max-width: 1440px) 33vw, 25vw"
+            src="/_next/image?url=https%3A%2F%2Fi.ibb.co%2FsR0ZdQs%2Fkids2.jpg&w=3840&q=100"
+            srcset="/_next/image?url=https%3A%2F%2Fi.ibb.co%2FsR0ZdQs%2Fkids2.jpg&w=256&q=100 256w, /_next/image?url=https%3A%2F%2Fi.ibb.co%2FsR0ZdQs%2Fkids2.jpg&w=384&q=100 384w, /_next/image?url=https%3A%2F%2Fi.ibb.co%2FsR0ZdQs%2Fkids2.jpg&w=640&q=100 640w, /_next/image?url=https%3A%2F%2Fi.ibb.co%2FsR0ZdQs%2Fkids2.jpg&w=750&q=100 750w, /_next/image?url=https%3A%2F%2Fi.ibb.co%2FsR0ZdQs%2Fkids2.jpg&w=828&q=100 828w, /_next/image?url=https%3A%2F%2Fi.ibb.co%2FsR0ZdQs%2Fkids2.jpg&w=1080&q=100 1080w, /_next/image?url=https%3A%2F%2Fi.ibb.co%2FsR0ZdQs%2Fkids2.jpg&w=1200&q=100 1200w, /_next/image?url=https%3A%2F%2Fi.ibb.co%2FsR0ZdQs%2Fkids2.jpg&w=1920&q=100 1920w, /_next/image?url=https%3A%2F%2Fi.ibb.co%2FsR0ZdQs%2Fkids2.jpg&w=2048&q=100 2048w, /_next/image?url=https%3A%2F%2Fi.ibb.co%2FsR0ZdQs%2Fkids2.jpg&w=3840&q=100 3840w"
+            style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent; background-size: cover; background-position: 50% 50%; background-repeat: no-repeat;"
+          />
+          <img
+            alt="kid-clothes"
+            data-nimg="fill"
+            decoding="async"
+            loading="lazy"
+            sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, (max-width: 1440px) 33vw, 25vw"
+            src="/_next/image?url=https%3A%2F%2Fi.ibb.co%2FVYbhCX9%2Fkids1.jpg&w=3840&q=100"
+            srcset="/_next/image?url=https%3A%2F%2Fi.ibb.co%2FVYbhCX9%2Fkids1.jpg&w=256&q=100 256w, /_next/image?url=https%3A%2F%2Fi.ibb.co%2FVYbhCX9%2Fkids1.jpg&w=384&q=100 384w, /_next/image?url=https%3A%2F%2Fi.ibb.co%2FVYbhCX9%2Fkids1.jpg&w=640&q=100 640w, /_next/image?url=https%3A%2F%2Fi.ibb.co%2FVYbhCX9%2Fkids1.jpg&w=750&q=100 750w, /_next/image?url=https%3A%2F%2Fi.ibb.co%2FVYbhCX9%2Fkids1.jpg&w=828&q=100 828w, /_next/image?url=https%3A%2F%2Fi.ibb.co%2FVYbhCX9%2Fkids1.jpg&w=1080&q=100 1080w, /_next/image?url=https%3A%2F%2Fi.ibb.co%2FVYbhCX9%2Fkids1.jpg&w=1200&q=100 1200w, /_next/image?url=https%3A%2F%2Fi.ibb.co%2FVYbhCX9%2Fkids1.jpg&w=1920&q=100 1920w, /_next/image?url=https%3A%2F%2Fi.ibb.co%2FVYbhCX9%2Fkids1.jpg&w=2048&q=100 2048w, /_next/image?url=https%3A%2F%2Fi.ibb.co%2FVYbhCX9%2Fkids1.jpg&w=3840&q=100 3840w"
+            style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent; background-size: cover; background-position: 50% 50%; background-repeat: no-repeat;"
+          />
+        </div>
+        <div
+          data-hero-grid-child="true"
+          data-hero-product-title="women-clothes"
+        >
+          <img
+            alt="women-clothes"
+            data-nimg="fill"
+            decoding="async"
+            loading="lazy"
+            sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, (max-width: 1440px) 33vw, 25vw"
+            src="/_next/image?url=https%3A%2F%2Fi.ibb.co%2FmG54Kwq%2Fpexels-photo-2.jpg&w=3840&q=100"
+            srcset="/_next/image?url=https%3A%2F%2Fi.ibb.co%2FmG54Kwq%2Fpexels-photo-2.jpg&w=256&q=100 256w, /_next/image?url=https%3A%2F%2Fi.ibb.co%2FmG54Kwq%2Fpexels-photo-2.jpg&w=384&q=100 384w, /_next/image?url=https%3A%2F%2Fi.ibb.co%2FmG54Kwq%2Fpexels-photo-2.jpg&w=640&q=100 640w, /_next/image?url=https%3A%2F%2Fi.ibb.co%2FmG54Kwq%2Fpexels-photo-2.jpg&w=750&q=100 750w, /_next/image?url=https%3A%2F%2Fi.ibb.co%2FmG54Kwq%2Fpexels-photo-2.jpg&w=828&q=100 828w, /_next/image?url=https%3A%2F%2Fi.ibb.co%2FmG54Kwq%2Fpexels-photo-2.jpg&w=1080&q=100 1080w, /_next/image?url=https%3A%2F%2Fi.ibb.co%2FmG54Kwq%2Fpexels-photo-2.jpg&w=1200&q=100 1200w, /_next/image?url=https%3A%2F%2Fi.ibb.co%2FmG54Kwq%2Fpexels-photo-2.jpg&w=1920&q=100 1920w, /_next/image?url=https%3A%2F%2Fi.ibb.co%2FmG54Kwq%2Fpexels-photo-2.jpg&w=2048&q=100 2048w, /_next/image?url=https%3A%2F%2Fi.ibb.co%2FmG54Kwq%2Fpexels-photo-2.jpg&w=3840&q=100 3840w"
+            style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent; background-size: cover; background-position: 50% 50%; background-repeat: no-repeat;"
+          />
+          <img
+            alt="women-clothes"
+            data-nimg="fill"
+            decoding="async"
+            loading="lazy"
+            sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, (max-width: 1440px) 33vw, 25vw"
+            src="/_next/image?url=https%3A%2F%2Fi.ibb.co%2FNSw7N5b%2Fpexels-photo-5.jpg&w=3840&q=100"
+            srcset="/_next/image?url=https%3A%2F%2Fi.ibb.co%2FNSw7N5b%2Fpexels-photo-5.jpg&w=256&q=100 256w, /_next/image?url=https%3A%2F%2Fi.ibb.co%2FNSw7N5b%2Fpexels-photo-5.jpg&w=384&q=100 384w, /_next/image?url=https%3A%2F%2Fi.ibb.co%2FNSw7N5b%2Fpexels-photo-5.jpg&w=640&q=100 640w, /_next/image?url=https%3A%2F%2Fi.ibb.co%2FNSw7N5b%2Fpexels-photo-5.jpg&w=750&q=100 750w, /_next/image?url=https%3A%2F%2Fi.ibb.co%2FNSw7N5b%2Fpexels-photo-5.jpg&w=828&q=100 828w, /_next/image?url=https%3A%2F%2Fi.ibb.co%2FNSw7N5b%2Fpexels-photo-5.jpg&w=1080&q=100 1080w, /_next/image?url=https%3A%2F%2Fi.ibb.co%2FNSw7N5b%2Fpexels-photo-5.jpg&w=1200&q=100 1200w, /_next/image?url=https%3A%2F%2Fi.ibb.co%2FNSw7N5b%2Fpexels-photo-5.jpg&w=1920&q=100 1920w, /_next/image?url=https%3A%2F%2Fi.ibb.co%2FNSw7N5b%2Fpexels-photo-5.jpg&w=2048&q=100 2048w, /_next/image?url=https%3A%2F%2Fi.ibb.co%2FNSw7N5b%2Fpexels-photo-5.jpg&w=3840&q=100 3840w"
+            style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent; background-size: cover; background-position: 50% 50%; background-repeat: no-repeat;"
+          />
+        </div>
+        <div
+          data-hero-grid-child="true"
+          data-hero-product-title="women-shoes"
+        >
+          <img
+            alt="women-shoes"
+            data-nimg="fill"
+            decoding="async"
+            loading="lazy"
+            sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, (max-width: 1440px) 33vw, 25vw"
+            src="/_next/image?url=https%3A%2F%2Fi.ibb.co%2FFsQGVPG%2Fwomen-shoes2.jpg&w=3840&q=100"
+            srcset="/_next/image?url=https%3A%2F%2Fi.ibb.co%2FFsQGVPG%2Fwomen-shoes2.jpg&w=256&q=100 256w, /_next/image?url=https%3A%2F%2Fi.ibb.co%2FFsQGVPG%2Fwomen-shoes2.jpg&w=384&q=100 384w, /_next/image?url=https%3A%2F%2Fi.ibb.co%2FFsQGVPG%2Fwomen-shoes2.jpg&w=640&q=100 640w, /_next/image?url=https%3A%2F%2Fi.ibb.co%2FFsQGVPG%2Fwomen-shoes2.jpg&w=750&q=100 750w, /_next/image?url=https%3A%2F%2Fi.ibb.co%2FFsQGVPG%2Fwomen-shoes2.jpg&w=828&q=100 828w, /_next/image?url=https%3A%2F%2Fi.ibb.co%2FFsQGVPG%2Fwomen-shoes2.jpg&w=1080&q=100 1080w, /_next/image?url=https%3A%2F%2Fi.ibb.co%2FFsQGVPG%2Fwomen-shoes2.jpg&w=1200&q=100 1200w, /_next/image?url=https%3A%2F%2Fi.ibb.co%2FFsQGVPG%2Fwomen-shoes2.jpg&w=1920&q=100 1920w, /_next/image?url=https%3A%2F%2Fi.ibb.co%2FFsQGVPG%2Fwomen-shoes2.jpg&w=2048&q=100 2048w, /_next/image?url=https%3A%2F%2Fi.ibb.co%2FFsQGVPG%2Fwomen-shoes2.jpg&w=3840&q=100 3840w"
+            style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent; background-size: cover; background-position: 50% 50%; background-repeat: no-repeat;"
+          />
+          <img
+            alt="women-shoes"
+            data-nimg="fill"
+            decoding="async"
+            loading="lazy"
+            sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, (max-width: 1440px) 33vw, 25vw"
+            src="/_next/image?url=https%3A%2F%2Fi.ibb.co%2FFqdB0tS%2Fwomen-shoes3.webp&w=3840&q=100"
+            srcset="/_next/image?url=https%3A%2F%2Fi.ibb.co%2FFqdB0tS%2Fwomen-shoes3.webp&w=256&q=100 256w, /_next/image?url=https%3A%2F%2Fi.ibb.co%2FFqdB0tS%2Fwomen-shoes3.webp&w=384&q=100 384w, /_next/image?url=https%3A%2F%2Fi.ibb.co%2FFqdB0tS%2Fwomen-shoes3.webp&w=640&q=100 640w, /_next/image?url=https%3A%2F%2Fi.ibb.co%2FFqdB0tS%2Fwomen-shoes3.webp&w=750&q=100 750w, /_next/image?url=https%3A%2F%2Fi.ibb.co%2FFqdB0tS%2Fwomen-shoes3.webp&w=828&q=100 828w, /_next/image?url=https%3A%2F%2Fi.ibb.co%2FFqdB0tS%2Fwomen-shoes3.webp&w=1080&q=100 1080w, /_next/image?url=https%3A%2F%2Fi.ibb.co%2FFqdB0tS%2Fwomen-shoes3.webp&w=1200&q=100 1200w, /_next/image?url=https%3A%2F%2Fi.ibb.co%2FFqdB0tS%2Fwomen-shoes3.webp&w=1920&q=100 1920w, /_next/image?url=https%3A%2F%2Fi.ibb.co%2FFqdB0tS%2Fwomen-shoes3.webp&w=2048&q=100 2048w, /_next/image?url=https%3A%2F%2Fi.ibb.co%2FFqdB0tS%2Fwomen-shoes3.webp&w=3840&q=100 3840w"
+            style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent; background-size: cover; background-position: 50% 50%; background-repeat: no-repeat;"
+          />
+        </div>
+        <div
+          data-hero-grid-child="true"
+          data-hero-product-title="men-shoes"
+        >
+          <img
+            alt="men-shoes"
+            data-nimg="fill"
+            decoding="async"
+            loading="lazy"
+            sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, (max-width: 1440px) 33vw, 25vw"
+            src="/_next/image?url=https%3A%2F%2Fi.ibb.co%2Fr4Dk0kt%2Fshoes3.jpg&w=3840&q=100"
+            srcset="/_next/image?url=https%3A%2F%2Fi.ibb.co%2Fr4Dk0kt%2Fshoes3.jpg&w=256&q=100 256w, /_next/image?url=https%3A%2F%2Fi.ibb.co%2Fr4Dk0kt%2Fshoes3.jpg&w=384&q=100 384w, /_next/image?url=https%3A%2F%2Fi.ibb.co%2Fr4Dk0kt%2Fshoes3.jpg&w=640&q=100 640w, /_next/image?url=https%3A%2F%2Fi.ibb.co%2Fr4Dk0kt%2Fshoes3.jpg&w=750&q=100 750w, /_next/image?url=https%3A%2F%2Fi.ibb.co%2Fr4Dk0kt%2Fshoes3.jpg&w=828&q=100 828w, /_next/image?url=https%3A%2F%2Fi.ibb.co%2Fr4Dk0kt%2Fshoes3.jpg&w=1080&q=100 1080w, /_next/image?url=https%3A%2F%2Fi.ibb.co%2Fr4Dk0kt%2Fshoes3.jpg&w=1200&q=100 1200w, /_next/image?url=https%3A%2F%2Fi.ibb.co%2Fr4Dk0kt%2Fshoes3.jpg&w=1920&q=100 1920w, /_next/image?url=https%3A%2F%2Fi.ibb.co%2Fr4Dk0kt%2Fshoes3.jpg&w=2048&q=100 2048w, /_next/image?url=https%3A%2F%2Fi.ibb.co%2Fr4Dk0kt%2Fshoes3.jpg&w=3840&q=100 3840w"
+            style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent; background-size: cover; background-position: 50% 50%; background-repeat: no-repeat;"
+          />
+          <img
+            alt="men-shoes"
+            data-nimg="fill"
+            decoding="async"
+            loading="lazy"
+            sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, (max-width: 1440px) 33vw, 25vw"
+            src="/_next/image?url=https%3A%2F%2Fi.ibb.co%2FQM6KDh9%2Fshoes4.jpg&w=3840&q=100"
+            srcset="/_next/image?url=https%3A%2F%2Fi.ibb.co%2FQM6KDh9%2Fshoes4.jpg&w=256&q=100 256w, /_next/image?url=https%3A%2F%2Fi.ibb.co%2FQM6KDh9%2Fshoes4.jpg&w=384&q=100 384w, /_next/image?url=https%3A%2F%2Fi.ibb.co%2FQM6KDh9%2Fshoes4.jpg&w=640&q=100 640w, /_next/image?url=https%3A%2F%2Fi.ibb.co%2FQM6KDh9%2Fshoes4.jpg&w=750&q=100 750w, /_next/image?url=https%3A%2F%2Fi.ibb.co%2FQM6KDh9%2Fshoes4.jpg&w=828&q=100 828w, /_next/image?url=https%3A%2F%2Fi.ibb.co%2FQM6KDh9%2Fshoes4.jpg&w=1080&q=100 1080w, /_next/image?url=https%3A%2F%2Fi.ibb.co%2FQM6KDh9%2Fshoes4.jpg&w=1200&q=100 1200w, /_next/image?url=https%3A%2F%2Fi.ibb.co%2FQM6KDh9%2Fshoes4.jpg&w=1920&q=100 1920w, /_next/image?url=https%3A%2F%2Fi.ibb.co%2FQM6KDh9%2Fshoes4.jpg&w=2048&q=100 2048w, /_next/image?url=https%3A%2F%2Fi.ibb.co%2FQM6KDh9%2Fshoes4.jpg&w=3840&q=100 3840w"
+            style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent; background-size: cover; background-position: 50% 50%; background-repeat: no-repeat;"
+          />
+        </div>
+        <div
+          data-hero-grid-child="true"
+          data-hero-product-title="men-clothes"
+        >
+          <img
+            alt="men-clothes"
+            data-nimg="fill"
+            decoding="async"
+            loading="lazy"
+            sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, (max-width: 1440px) 33vw, 25vw"
+            src="/_next/image?url=https%3A%2F%2Fi.ibb.co%2Fk2B5xRw%2Fmen-clothes-1.webp&w=3840&q=100"
+            srcset="/_next/image?url=https%3A%2F%2Fi.ibb.co%2Fk2B5xRw%2Fmen-clothes-1.webp&w=256&q=100 256w, /_next/image?url=https%3A%2F%2Fi.ibb.co%2Fk2B5xRw%2Fmen-clothes-1.webp&w=384&q=100 384w, /_next/image?url=https%3A%2F%2Fi.ibb.co%2Fk2B5xRw%2Fmen-clothes-1.webp&w=640&q=100 640w, /_next/image?url=https%3A%2F%2Fi.ibb.co%2Fk2B5xRw%2Fmen-clothes-1.webp&w=750&q=100 750w, /_next/image?url=https%3A%2F%2Fi.ibb.co%2Fk2B5xRw%2Fmen-clothes-1.webp&w=828&q=100 828w, /_next/image?url=https%3A%2F%2Fi.ibb.co%2Fk2B5xRw%2Fmen-clothes-1.webp&w=1080&q=100 1080w, /_next/image?url=https%3A%2F%2Fi.ibb.co%2Fk2B5xRw%2Fmen-clothes-1.webp&w=1200&q=100 1200w, /_next/image?url=https%3A%2F%2Fi.ibb.co%2Fk2B5xRw%2Fmen-clothes-1.webp&w=1920&q=100 1920w, /_next/image?url=https%3A%2F%2Fi.ibb.co%2Fk2B5xRw%2Fmen-clothes-1.webp&w=2048&q=100 2048w, /_next/image?url=https%3A%2F%2Fi.ibb.co%2Fk2B5xRw%2Fmen-clothes-1.webp&w=3840&q=100 3840w"
+            style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent; background-size: cover; background-position: 50% 50%; background-repeat: no-repeat;"
+          />
+          <img
+            alt="men-clothes"
+            data-nimg="fill"
+            decoding="async"
+            loading="lazy"
+            sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, (max-width: 1440px) 33vw, 25vw"
+            src="/_next/image?url=https%3A%2F%2Fi.ibb.co%2FJ3KByKq%2Fmen-clothes-2.jpg&w=3840&q=100"
+            srcset="/_next/image?url=https%3A%2F%2Fi.ibb.co%2FJ3KByKq%2Fmen-clothes-2.jpg&w=256&q=100 256w, /_next/image?url=https%3A%2F%2Fi.ibb.co%2FJ3KByKq%2Fmen-clothes-2.jpg&w=384&q=100 384w, /_next/image?url=https%3A%2F%2Fi.ibb.co%2FJ3KByKq%2Fmen-clothes-2.jpg&w=640&q=100 640w, /_next/image?url=https%3A%2F%2Fi.ibb.co%2FJ3KByKq%2Fmen-clothes-2.jpg&w=750&q=100 750w, /_next/image?url=https%3A%2F%2Fi.ibb.co%2FJ3KByKq%2Fmen-clothes-2.jpg&w=828&q=100 828w, /_next/image?url=https%3A%2F%2Fi.ibb.co%2FJ3KByKq%2Fmen-clothes-2.jpg&w=1080&q=100 1080w, /_next/image?url=https%3A%2F%2Fi.ibb.co%2FJ3KByKq%2Fmen-clothes-2.jpg&w=1200&q=100 1200w, /_next/image?url=https%3A%2F%2Fi.ibb.co%2FJ3KByKq%2Fmen-clothes-2.jpg&w=1920&q=100 1920w, /_next/image?url=https%3A%2F%2Fi.ibb.co%2FJ3KByKq%2Fmen-clothes-2.jpg&w=2048&q=100 2048w, /_next/image?url=https%3A%2F%2Fi.ibb.co%2FJ3KByKq%2Fmen-clothes-2.jpg&w=3840&q=100 3840w"
+            style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent; background-size: cover; background-position: 50% 50%; background-repeat: no-repeat;"
+          />
+        </div>
+        <div
+          data-hero-grid-child="true"
+          data-hero-product-title="featured-clothes"
+        >
+          <img
+            alt="featured-clothes"
+            data-nimg="fill"
+            decoding="async"
+            loading="lazy"
+            sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, (max-width: 1440px) 33vw, 25vw"
+            src="/_next/image?url=https%3A%2F%2Fi.ibb.co%2FJc8LNqF%2Ffeatured-clothes-2.webp&w=3840&q=100"
+            srcset="/_next/image?url=https%3A%2F%2Fi.ibb.co%2FJc8LNqF%2Ffeatured-clothes-2.webp&w=256&q=100 256w, /_next/image?url=https%3A%2F%2Fi.ibb.co%2FJc8LNqF%2Ffeatured-clothes-2.webp&w=384&q=100 384w, /_next/image?url=https%3A%2F%2Fi.ibb.co%2FJc8LNqF%2Ffeatured-clothes-2.webp&w=640&q=100 640w, /_next/image?url=https%3A%2F%2Fi.ibb.co%2FJc8LNqF%2Ffeatured-clothes-2.webp&w=750&q=100 750w, /_next/image?url=https%3A%2F%2Fi.ibb.co%2FJc8LNqF%2Ffeatured-clothes-2.webp&w=828&q=100 828w, /_next/image?url=https%3A%2F%2Fi.ibb.co%2FJc8LNqF%2Ffeatured-clothes-2.webp&w=1080&q=100 1080w, /_next/image?url=https%3A%2F%2Fi.ibb.co%2FJc8LNqF%2Ffeatured-clothes-2.webp&w=1200&q=100 1200w, /_next/image?url=https%3A%2F%2Fi.ibb.co%2FJc8LNqF%2Ffeatured-clothes-2.webp&w=1920&q=100 1920w, /_next/image?url=https%3A%2F%2Fi.ibb.co%2FJc8LNqF%2Ffeatured-clothes-2.webp&w=2048&q=100 2048w, /_next/image?url=https%3A%2F%2Fi.ibb.co%2FJc8LNqF%2Ffeatured-clothes-2.webp&w=3840&q=100 3840w"
+            style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent; background-size: cover; background-position: 50% 50%; background-repeat: no-repeat;"
+          />
+          <img
+            alt="featured-clothes"
+            data-nimg="fill"
+            decoding="async"
+            loading="lazy"
+            sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, (max-width: 1440px) 33vw, 25vw"
+            src="/_next/image?url=https%3A%2F%2Fi.ibb.co%2FDf30CyD%2Ffeatured-clothes-1.webp&w=3840&q=100"
+            srcset="/_next/image?url=https%3A%2F%2Fi.ibb.co%2FDf30CyD%2Ffeatured-clothes-1.webp&w=256&q=100 256w, /_next/image?url=https%3A%2F%2Fi.ibb.co%2FDf30CyD%2Ffeatured-clothes-1.webp&w=384&q=100 384w, /_next/image?url=https%3A%2F%2Fi.ibb.co%2FDf30CyD%2Ffeatured-clothes-1.webp&w=640&q=100 640w, /_next/image?url=https%3A%2F%2Fi.ibb.co%2FDf30CyD%2Ffeatured-clothes-1.webp&w=750&q=100 750w, /_next/image?url=https%3A%2F%2Fi.ibb.co%2FDf30CyD%2Ffeatured-clothes-1.webp&w=828&q=100 828w, /_next/image?url=https%3A%2F%2Fi.ibb.co%2FDf30CyD%2Ffeatured-clothes-1.webp&w=1080&q=100 1080w, /_next/image?url=https%3A%2F%2Fi.ibb.co%2FDf30CyD%2Ffeatured-clothes-1.webp&w=1200&q=100 1200w, /_next/image?url=https%3A%2F%2Fi.ibb.co%2FDf30CyD%2Ffeatured-clothes-1.webp&w=1920&q=100 1920w, /_next/image?url=https%3A%2F%2Fi.ibb.co%2FDf30CyD%2Ffeatured-clothes-1.webp&w=2048&q=100 2048w, /_next/image?url=https%3A%2F%2Fi.ibb.co%2FDf30CyD%2Ffeatured-clothes-1.webp&w=3840&q=100 3840w"
+            style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent; background-size: cover; background-position: 50% 50%; background-repeat: no-repeat;"
+          />
+        </div>
+        <div
+          data-hero-grid-child="true"
+          data-hero-product-title="featured-shoes"
+        >
+          <img
+            alt="featured-shoes"
+            data-nimg="fill"
+            decoding="async"
+            loading="lazy"
+            sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, (max-width: 1440px) 33vw, 25vw"
+            src="/_next/image?url=https%3A%2F%2Fi.ibb.co%2FR2Ghc4c%2Fmen-shoes-3.jpg&w=3840&q=100"
+            srcset="/_next/image?url=https%3A%2F%2Fi.ibb.co%2FR2Ghc4c%2Fmen-shoes-3.jpg&w=256&q=100 256w, /_next/image?url=https%3A%2F%2Fi.ibb.co%2FR2Ghc4c%2Fmen-shoes-3.jpg&w=384&q=100 384w, /_next/image?url=https%3A%2F%2Fi.ibb.co%2FR2Ghc4c%2Fmen-shoes-3.jpg&w=640&q=100 640w, /_next/image?url=https%3A%2F%2Fi.ibb.co%2FR2Ghc4c%2Fmen-shoes-3.jpg&w=750&q=100 750w, /_next/image?url=https%3A%2F%2Fi.ibb.co%2FR2Ghc4c%2Fmen-shoes-3.jpg&w=828&q=100 828w, /_next/image?url=https%3A%2F%2Fi.ibb.co%2FR2Ghc4c%2Fmen-shoes-3.jpg&w=1080&q=100 1080w, /_next/image?url=https%3A%2F%2Fi.ibb.co%2FR2Ghc4c%2Fmen-shoes-3.jpg&w=1200&q=100 1200w, /_next/image?url=https%3A%2F%2Fi.ibb.co%2FR2Ghc4c%2Fmen-shoes-3.jpg&w=1920&q=100 1920w, /_next/image?url=https%3A%2F%2Fi.ibb.co%2FR2Ghc4c%2Fmen-shoes-3.jpg&w=2048&q=100 2048w, /_next/image?url=https%3A%2F%2Fi.ibb.co%2FR2Ghc4c%2Fmen-shoes-3.jpg&w=3840&q=100 3840w"
+            style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent; background-size: cover; background-position: 50% 50%; background-repeat: no-repeat;"
+          />
+          <img
+            alt="featured-shoes"
+            data-nimg="fill"
+            decoding="async"
+            loading="lazy"
+            sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, (max-width: 1440px) 33vw, 25vw"
+            src="/_next/image?url=https%3A%2F%2Fi.ibb.co%2F1s5Z7yC%2Farrival-shoes-1.jpg&w=3840&q=100"
+            srcset="/_next/image?url=https%3A%2F%2Fi.ibb.co%2F1s5Z7yC%2Farrival-shoes-1.jpg&w=256&q=100 256w, /_next/image?url=https%3A%2F%2Fi.ibb.co%2F1s5Z7yC%2Farrival-shoes-1.jpg&w=384&q=100 384w, /_next/image?url=https%3A%2F%2Fi.ibb.co%2F1s5Z7yC%2Farrival-shoes-1.jpg&w=640&q=100 640w, /_next/image?url=https%3A%2F%2Fi.ibb.co%2F1s5Z7yC%2Farrival-shoes-1.jpg&w=750&q=100 750w, /_next/image?url=https%3A%2F%2Fi.ibb.co%2F1s5Z7yC%2Farrival-shoes-1.jpg&w=828&q=100 828w, /_next/image?url=https%3A%2F%2Fi.ibb.co%2F1s5Z7yC%2Farrival-shoes-1.jpg&w=1080&q=100 1080w, /_next/image?url=https%3A%2F%2Fi.ibb.co%2F1s5Z7yC%2Farrival-shoes-1.jpg&w=1200&q=100 1200w, /_next/image?url=https%3A%2F%2Fi.ibb.co%2F1s5Z7yC%2Farrival-shoes-1.jpg&w=1920&q=100 1920w, /_next/image?url=https%3A%2F%2Fi.ibb.co%2F1s5Z7yC%2Farrival-shoes-1.jpg&w=2048&q=100 2048w, /_next/image?url=https%3A%2F%2Fi.ibb.co%2F1s5Z7yC%2Farrival-shoes-1.jpg&w=3840&q=100 3840w"
+            style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent; background-size: cover; background-position: 50% 50%; background-repeat: no-repeat;"
+          />
+        </div>
+      </div>
+    </a>
+  </section>
+</DocumentFragment>
+`;

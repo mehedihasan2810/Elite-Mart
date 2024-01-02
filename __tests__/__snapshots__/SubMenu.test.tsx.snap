@@ -1,0 +1,145 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Products /> Should render properly & match snapshot 1`] = `
+<DocumentFragment>
+  <aside
+    class=""
+    data-submenu="featured"
+  >
+    <section>
+      <h6>
+        Featured
+      </h6>
+      <ul
+        role="list"
+      >
+        <li>
+          <a
+            href="/products"
+          >
+            New Arrivals
+          </a>
+        </li>
+        <li>
+          <a
+            href="/products"
+          >
+            Bestsellers
+          </a>
+        </li>
+        <li>
+          <a
+            href="/products"
+          >
+            Latest Product
+          </a>
+        </li>
+        <li>
+          <a
+            href="/products"
+          >
+            Latest Clothing
+          </a>
+        </li>
+        <li>
+          <a
+            href="/products"
+          >
+            Latest Sneekers
+          </a>
+        </li>
+      </ul>
+    </section>
+    <section>
+      <h6>
+        New For Men
+      </h6>
+      <ul
+        role="list"
+      >
+        <li>
+          <a
+            href="/products"
+          >
+            Shoes
+          </a>
+        </li>
+        <li>
+          <a
+            href="/products"
+          >
+            Clothing
+          </a>
+        </li>
+        <li>
+          <a
+            href="/products"
+          >
+            Accessories
+          </a>
+        </li>
+      </ul>
+    </section>
+    <section>
+      <h6>
+        New For Women
+      </h6>
+      <ul
+        role="list"
+      >
+        <li>
+          <a
+            href="/products"
+          >
+            Shoes
+          </a>
+        </li>
+        <li>
+          <a
+            href="/products"
+          >
+            Clothing
+          </a>
+        </li>
+        <li>
+          <a
+            href="/products"
+          >
+            Accessories
+          </a>
+        </li>
+      </ul>
+    </section>
+    <section>
+      <h6>
+        New For Kids
+      </h6>
+      <ul
+        role="list"
+      >
+        <li>
+          <a
+            href="/products"
+          >
+            Shoes
+          </a>
+        </li>
+        <li>
+          <a
+            href="/products"
+          >
+            Clothing
+          </a>
+        </li>
+        <li>
+          <a
+            href="/products"
+          >
+            Accessories
+          </a>
+        </li>
+      </ul>
+    </section>
+  </aside>
+</DocumentFragment>
+`;
